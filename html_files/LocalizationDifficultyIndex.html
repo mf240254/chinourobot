@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-  <meta charset="utf-8"/>
- </head>
- <body link="blue" style="tab-interval:42.0pt;text-justify-trim:
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<body link="blue" style="tab-interval:42.0pt;text-justify-trim:
 punctuation" vlink="purple">
-  <div class="WordSection1" style="layout-grid:18.0pt">
-   <p>
-    Self-localization
+ <div class="WordSection1" style="layout-grid:18.0pt">
+  <p>
+   Self-localization
 from Images with Small Overlap
-   </p>
-   <p>
-    With the recent success of visual features from deep convolutional neural
+  </p>
+  <p>
+   With the recent success of visual features from deep convolutional neural
 networks (DCNN) in visual robot self-localization, it has become important and practical
 to address more general self-localization scenarios. In this paper, we address
 the scenario of self-localization from images with small overlap. We explicitly
 introduce a localization difficulty index as a decreasing function of view
 overlap between query and relevant database images and investigate performance
 versus difficulty for challenging cross-view self-localization tasks. We
-   </p>
-   <p>
-    then
+  </p>
+  <p>
+   then
     reformulate the self-localization as a scalable
 bag-of-visual-features (BoVF) scene retrieval and present an efficient solution
 called PCA-NBNN, aiming to facilitate fast and yet discriminative
@@ -30,212 +30,212 @@ demonstrate that the proposed PCA-NBNN framework frequently achieves comparable
 results to previous DCNN features and that the BoVF model is significantly more
 efficient. We further address an important alternative scenario of
 “self-localization from images with NO overlap” and report the result.
-   </p>
-   <p>
-    <b>
-     Members:
-    </b>
-    Kanji Tanaka,
+  </p>
+  <p>
+   <b>
+    Members:
+   </b>
+   Kanji Tanaka,
     Tomoya
     Murase
-    <b>
-    </b>
-   </p>
-   <p>
-    <b>
-     Relevant Publication
+   <b>
+   </b>
+  </p>
+  <p>
+   <b>
+    Relevant Publication
      :
-    </b>
-    <br/>
-    <br/>
-    Self-localization from images with small overlap
-    <br/>
-    IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2016)
-    <br/>
-    Kanji Tanaka
-    <br/>
-    <a href="https://dblp.org/rec/bibtex/conf/iros/Tanaka16">
-     Bibtex source
-    </a>
-    ,
-    <a href="https://arxiv.org/abs/1603.00993">
-     Document PDF
-    </a>
-    <br/>
-    <br/>
-    <b>
-     Acknowledgements:
-    </b>
-    This work is supported in part by JSPS KAKENHI
+   </b>
+   <br/>
+   <br/>
+   Self-localization from images with small overlap
+   <br/>
+   IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2016)
+   <br/>
+   Kanji Tanaka
+   <br/>
+   <a href="https://dblp.org/rec/bibtex/conf/iros/Tanaka16">
+    Bibtex source
+   </a>
+   ,
+   <a href="https://arxiv.org/abs/1603.00993">
+    Document PDF
+   </a>
+   <br/>
+   <br/>
+   <b>
+    Acknowledgements:
+   </b>
+   This work is supported in part by JSPS KAKENHI
 Grant-in-Aid for Young Scientists (B) 23700229, and for Scientific Research (C)
 26330297.
-   </p>
-   <p>
-    <img src="images_file/LocalizationDifficultyIndex2/image019.gif" v:shapes="図_x0020_1"/>
-    <?endif?>
-   </p>
-   <p>
-    Fig. 1. Self-localization with different levels of localization difficulty
+  </p>
+  <p>
+   <img src="../images_file/LocalizationDifficultyIndex2/image019.gif" v:shapes="図_x0020_1"/>
+   <?endif?>
+  </p>
+  <p>
+   Fig. 1. Self-localization with different levels of localization difficulty
 index
-   </p>
-   <p>
-    (LDI). The LDI of a self-localization task is a decreasing function of
+  </p>
+  <p>
+   (LDI). The LDI of a self-localization task is a decreasing function of
 view
-   </p>
-   <p>
-    overlap between the query and relevant database image pair. In
+  </p>
+  <p>
+   overlap between the query and relevant database image pair. In
 experiments,
-   </p>
-   <p>
-    we employ SIFT matching with VFC verification (colored line segments)
-   </p>
-   <p>
-    to evaluate the amount of view overlap. All the pairs in the dataset are
-   </p>
-   <p>
-    evaluated and sorted according in ascending order of LDI. Rank in the
+  </p>
+  <p>
+   we employ SIFT matching with VFC verification (colored line segments)
+  </p>
+  <p>
+   to evaluate the amount of view overlap. All the pairs in the dataset are
+  </p>
+  <p>
+   evaluated and sorted according in ascending order of LDI. Rank in the
 sorted
-   </p>
-   <p>
-    list (normalized by the list’s length) [%] can be viewed as a prediction
+  </p>
+  <p>
+   list (normalized by the list’s length) [%] can be viewed as a prediction
 of
-   </p>
-   <p>
-    relative difficulty of the corresponding self-localization task. Displayed
+  </p>
+  <p>
+   relative difficulty of the corresponding self-localization task. Displayed
 in
-   </p>
-   <p>
-    figures are samples from self-localization tasks with four different
+  </p>
+  <p>
+   figures are samples from self-localization tasks with four different
 levels of
-   </p>
-   <p>
-    ranks [%].
-   </p>
-   <p>
-    <img src="images_file/LocalizationDifficultyIndex2/image020.jpg" v:shapes="図_x0020_4"/>
-    <?endif?>
-   </p>
-   <p>
-    Fig. 2. Experimental environments. Red, yellow, and green lines: viewpoint
-   </p>
-   <p>
-    paths on which
+  </p>
+  <p>
+   ranks [%].
+  </p>
+  <p>
+   <img src="../images_file/LocalizationDifficultyIndex2/image020.jpg" v:shapes="図_x0020_4"/>
+   <?endif?>
+  </p>
+  <p>
+   Fig. 2. Experimental environments. Red, yellow, and green lines: viewpoint
+  </p>
+  <p>
+   paths on which
 dataset #1, #2, and #3 were collected.
-   </p>
-   <p>
-    <img src="images_file/LocalizationDifficultyIndex2/image021.jpg" v:shapes="図_x0020_7"/>
-    <?endif?>
-   </p>
-   <p>
-    Fig. 3. Sample
+  </p>
+  <p>
+   <img src="../images_file/LocalizationDifficultyIndex2/image021.jpg" v:shapes="図_x0020_7"/>
+   <?endif?>
+  </p>
+  <p>
+   Fig. 3. Sample
 configurations of viewpoints for different levels of localization difficulties.
-   </p>
-   <p>
-    <?if !vml?>
-    <img src="images_file/LocalizationDifficultyIndex2/image022.jpg" v:shapes="図_x0020_10"/>
-    <?endif?>
-   </p>
-   <p>
-    Fig. 4. Compact binary landmarks. a, b, c, and d: 4 different examples of
+  </p>
+  <p>
+   <?if !vml?>
+   <img src="../images_file/LocalizationDifficultyIndex2/image022.jpg" v:shapes="図_x0020_10"/>
+   <?endif?>
+  </p>
+  <p>
+   Fig. 4. Compact binary landmarks. a, b, c, and d: 4 different examples of
 a query image (top) being explained by one image-level feature and 20
 part-level
-   </p>
-   <p>
-    features
+  </p>
+  <p>
+   features
 (bottom). Each scene part is further encoded to a 128-bit binary code, which is
 visualized by a barcode.
-   </p>
-   <p>
-    <?if !vml?>
-    <img src="images_file/LocalizationDifficultyIndex2/image023.jpg" v:shapes="図_x0020_13"/>
-    <?endif?>
-   </p>
-   <p>
-    Fig. 5. Effect of asymmetric distance computation (ADC). The figures
+  </p>
+  <p>
+   <?if !vml?>
+   <img src="../images_file/LocalizationDifficultyIndex2/image023.jpg" v:shapes="図_x0020_13"/>
+   <?endif?>
+  </p>
+  <p>
+   Fig. 5. Effect of asymmetric distance computation (ADC). The figures
 compare the two different encoding schemes, BoW (top) and ADC (bottom), using a
 toy example of a 2D feature space
-    <i>
-     x
-    </i>
-    -
-    <i>
-     y
-    </i>
-    , in the case of the fine library. In the figures,
+   <i>
+    x
+   </i>
+   -
+   <i>
+    y
+   </i>
+   , in the case of the fine library. In the figures,
 query/database images are located
-    <i>
-     z
-    </i>
-    =
+   <i>
+    z
+   </i>
+   =
     2/
-    <i>
-     z
-    </i>
-    =
-    <i>
-     􀀀
-    </i>
-    2, local features extracted from query/database images
+   <i>
+    z
+   </i>
+   =
+   <i>
+    􀀀
+   </i>
+   2, local features extracted from query/database images
 are located
-    <i>
-     z
-    </i>
-    =
+   <i>
+    z
+   </i>
+   =
     1/
-    <i>
-     z
-    </i>
-    =
-    <i>
-     􀀀
-    </i>
-    1, and library features (green dots) including NN library features
+   <i>
+    z
+   </i>
+   =
+   <i>
+    􀀀
+   </i>
+   1, and library features (green dots) including NN library features
 (colored small boxes) are located
-    <i>
-     z
-    </i>
-    =
+   <i>
+    z
+   </i>
+   =
     0. Previous BoW systems (top), which
 encode both query and database features, frequently fail to identify common
 library features between query and database images in the case of our fine
 library. Conversely, ADC, which encodes only database features, not query
 features, is stable to identify NN library features of individual database
 features by an online search over the space of library features (i.e.,
-    <i>
-     z
-    </i>
-    =
+   <i>
+    z
+   </i>
+   =
     0).
-   </p>
-   <p>
-    <img src="images_file/LocalizationDifficultyIndex2/image024.jpg" v:shapes="図_x0020_16"/>
-    <?endif?>
-   </p>
-   <p>
-    Fig. 6. Performance vs. difficulty. Vertical axis: ratio of self-localization
+  </p>
+  <p>
+   <img src="../images_file/LocalizationDifficultyIndex2/image024.jpg" v:shapes="図_x0020_16"/>
+   <?endif?>
+  </p>
+  <p>
+   Fig. 6. Performance vs. difficulty. Vertical axis: ratio of self-localization
 tasks where the ground truth image pair is top-
-    <i>
-     X
-    </i>
-    ranked for ten different ranges of
+   <i>
+    X
+   </i>
+   ranked for ten different ranges of
 rank
-    <i>
-     X
-    </i>
-    (
-    <i>
-     X
-    </i>
-    : 0.0-0.1, 0.1-0.2, ... , 0.9-1.0.).
+   <i>
+    X
+   </i>
+   (
+   <i>
+    X
+   </i>
+   : 0.0-0.1, 0.1-0.2, ... , 0.9-1.0.).
 Horizontal axis: view overlap in terms of number of VFC matches, which is a
 decreasing function of localization difficulty index.
-   </p>
-   <p>
-    <img src="images_file/LocalizationDifficultyIndex2/image025.jpg" v:shapes="図_x0020_19"/>
-    <?endif?>
-   </p>
-   <p>
-    Fig. 7. Samples of self-localization tasks. Displayed in figures are
+  </p>
+  <p>
+   <img src="../images_file/LocalizationDifficultyIndex2/image025.jpg" v:shapes="図_x0020_19"/>
+   <?endif?>
+  </p>
+  <p>
+   Fig. 7. Samples of self-localization tasks. Displayed in figures are
 samples of self-localization tasks (using “bodw20” algorithm). We uniformly
 sampled them from the experiments. For each sample, its query image (left) and
 the relevant database image (right) are displayed with the view overlap score
@@ -244,36 +244,36 @@ the rank assigned to the ground-truth database relevant image, within a ranked
 list output by the recognition algorithm. From top to bottom, left to right,
 these samples are displayed in descending order of view overlap (i.e., from
 easiest to hardest).
-   </p>
-   <p>
-    <?if !vml?>
-    <img src="images_file/LocalizationDifficultyIndex2/image026.jpg" v:shapes="図_x0020_22"/>
-   </p>
-   <p>
-    Fig. 8.
+  </p>
+  <p>
+   <?if !vml?>
+   <img src="../images_file/LocalizationDifficultyIndex2/image026.jpg" v:shapes="図_x0020_22"/>
+  </p>
+  <p>
+   Fig. 8.
 Localization performance on relatively easy localization scenarios.
-   </p>
-   <p>
-    <img src="images_file/LocalizationDifficultyIndex2/image027.jpg" v:shapes="図_x0020_25"/>
-    <?endif?>
-   </p>
-   <p>
-    Fig. 9.
+  </p>
+  <p>
+   <img src="../images_file/LocalizationDifficultyIndex2/image027.jpg" v:shapes="図_x0020_25"/>
+   <?endif?>
+  </p>
+  <p>
+   Fig. 9.
 Localization performance on relatively hard localization scenarios.
-   </p>
-   <p>
-    <b>
-     Members
-    </b>
-    Tanaka Kanji, Murase Tomoya, Yanagihara Kentaro
-   </p>
-   <p>
-    <b>
-     Cross View Localization dataset
-    </b>
-    <br/>
-    <br/>
-    The cross season dataset consists of around 15,000 images taken around a
+  </p>
+  <p>
+   <b>
+    Members
+   </b>
+   Tanaka Kanji, Murase Tomoya, Yanagihara Kentaro
+  </p>
+  <p>
+   <b>
+    Cross View Localization dataset
+   </b>
+   <br/>
+   <br/>
+   The cross season dataset consists of around 15,000 images taken around a
 university campus, using a Bumblebee stereo camera. The viewpoint trajectory
 has been estimated using a stereo visual odometry and saved in a file ``vo.txt
     ”
@@ -281,57 +281,56 @@ has been estimated using a stereo visual odometry and saved in a file ``vo.txt
 SLAM algorithm and saved in ``is.txt
     ”
     .
-   </p>
-   <p>
-    DOWNLOAD:
-    <a href="http://rc.his.u-fukui.ac.jp/cross_view_localization_dataset.zip">
-     cross_view_localization_dataset.zip
-    </a>
-    <br/>
-    <br/>
-    <b>
-     Description of files
+  </p>
+  <p>
+   DOWNLOAD:
+   <a href="http://rc.his.u-fukui.ac.jp/cross_view_localization_dataset.zip">
+    cross_view_localization_dataset.zip
+   </a>
+   <br/>
+   <br/>
+   <b>
+    Description of files
      :
-    </b>
-    <br/>
-    <br/>
-    cross_view_localization/
-    <br/>
-    1/
-    <br/>
-    img_dir/*pgm
-    <br/>
-    is.txt
-    <br/>
-    vo.txt
-   </p>
-   <p>
-    2/
-    <br/>
-    img_dir/*pgm
-    <br/>
-    is.txt
-    <br/>
-    vo.txt
-   </p>
-   <p>
-    3/
-    <br/>
-    img_dir/*pgm
-    <br/>
-    is.txt
-    <br/>
-    vo.txt
-    <br/>
-    <br/>
-   </p>
-   <p>
-    Each line of ``is.txt
+   </b>
+   <br/>
+   <br/>
+   cross_view_localization/
+   <br/>
+   1/
+   <br/>
+   img_dir/*pgm
+   <br/>
+   is.txt
+   <br/>
+   vo.txt
+  </p>
+  <p>
+   2/
+   <br/>
+   img_dir/*pgm
+   <br/>
+   is.txt
+   <br/>
+   vo.txt
+  </p>
+  <p>
+   3/
+   <br/>
+   img_dir/*pgm
+   <br/>
+   is.txt
+   <br/>
+   vo.txt
+   <br/>
+   <br/>
+  </p>
+  <p>
+   Each line of ``is.txt
     ”
     and ``vo.txt
     ”
     consists of [x] [y] [\theta].
-   </p>
-  </div>
- </body>
-</html>
+  </p>
+ </div>
+</body>
