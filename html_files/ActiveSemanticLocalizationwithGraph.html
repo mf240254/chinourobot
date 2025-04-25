@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>論文タイトル - CVPR 2024</title>
+  <title>Active Semantic Localization with Graph Neural Embedding - ACPR 2023</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -81,7 +81,16 @@
 
   <h2>Abstract</h2>
   <div class="abstract">
-    <p>Semantic localization, i.e., robot self-localization with semantic image modality, is critical in recently emerging embodied AI applications (e.g., point-goal navigation, object- goal navigation, vision language navigation) and topological mapping applications (e.g., graph neural SLAM, ego-centric topological map). However, most existing works on semantic localization focus on passive vision tasks without viewpoint planning, or rely on additional rich modalities (e.g., depth measurements). Thus, the problem is largely unsolved. In this work, we explore a lightweight, entirely CPU-based, domain-adaptive semantic localization framework, called graph neural localizer. Our approach is inspired by two recently emerging technologies: (1) Scene graph, which combines the viewpoint- and appearance- invariance of local and global features; (2) Graph neural network, which enables direct learn- ing/recognition of graph data (i.e., non-vector data). Specifically, a graph convolutional neural network is first trained as a scene graph classifier for passive vision, and then its knowledge is transferred to a reinforcement-learning planner for active vision. Experiments on two scenarios, self-supervised learning and unsupervised domain adaptation, using a photo-realistic Habitat simulator validate the effectiveness of the proposed method.</p>
+    <p>Semantic localization, i.e., robot self-localization with semantic image modality, is critical in recently emerging embodied AI applications 
+      (e.g., point-goal navigation, object- goal navigation, vision language navigation) and topological mapping applications (e.g., graph neural SLAM,
+      ego-centric topological map). However, most existing works on semantic localization focus on passive vision tasks without viewpoint planning,
+      or rely on additional rich modalities (e.g., depth measurements). Thus, the problem is largely unsolved. In this work, we explore a lightweight,
+      entirely CPU-based, domain-adaptive semantic localization framework, called graph neural localizer. Our approach is inspired by two recently emerging technologies:
+      (1) Scene graph, which combines the viewpoint- and appearance- invariance of local and global features; (2) Graph neural network,
+      which enables direct learn- ing/recognition of graph data (i.e., non-vector data). Specifically, a graph convolutional neural network is first
+      trained as a scene graph classifier for passive vision, and then its knowledge is transferred to a reinforcement-learning planner for active vision.
+      Experiments on two scenarios, self-supervised learning and unsupervised domain adaptation, using a photo-realistic Habitat simulator validate the effectiveness
+      of the proposed method.</p>
   </div>
 
   <h2>Related documents</h2>
