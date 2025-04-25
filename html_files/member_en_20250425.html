@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Member List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .last-updated {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .search-container {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        input[type="text"] {
+            padding: 8px;
+            width: 80%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(odd) {
+            background-color: #fafafa;
+        }
+        .group {
+            font-weight: bold;
+            background-color: #e0e0e0;
+        }
+        .group-teacher { background-color: #cce5ff; }
+        .group-grad { background-color: #d4edda; }
+        .group-undergrad { background-color: #fff3cd; }
+        .group-ob { background-color: #f8d7da; }
+        @media (max-width: 600px) {
+            th, td {
+                padding: 8px;
+                font-size: 14px;
+            }
+            input[type="text"] {
+                width: 90%;
+            }
+        }
+        .ob-list {
+            column-count: 1; /* 画面が広ければ2列表示 */
+            column-gap: 20px;
+            line-height: 1.6;
+            padding-left: 10px;
+            font-size: 14px;
+            white-space: normal;
+        }
+        @media (max-width: 600px) {
+            .ob-list {
+                column-count: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Member List</h1>
+    <div class="last-updated">Last Updated: April 25, 2025</div>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search by name">
+    </div>
+
+    <table id="memberTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="group group-teacher">
+                <td colspan="2">Faculty</td>
+            </tr>
+            <tr><td>Kanji Tanaka</td><td>Associate Professor</td></tr>
+            <tr><td>Tomoe Hiroki</td><td>Technical Staff</td></tr>
+
+            <tr class="group group-grad">
+                <td colspan="2">Graduate Students</td>
+            </tr>
+            <tr><td>Daiki Iwata</td><td>Graduate Student</td></tr>
+            <tr><td>Kenta Tsukahara</td><td>Graduate Student</td></tr>
+            <tr><td>Koki Terashima</td><td>Graduate Student</td></tr>
+            <tr><td>Yudai Noda</td><td>Graduate Student</td></tr>
+            <tr><td>Kakeru Hashimoto</td><td>Graduate Student</td></tr>
+            <tr><td>Tatsuro Sakai</td><td>Graduate Student</td></tr>
+            <tr><td>WuHao Xie</td><td>Graduate Student</td></tr>
+            <tr><td>Yanshuo Bai</td><td>Graduate Student</td></tr>
+
+            <tr class="group group-undergrad">
+                <td colspan="2">Undergraduate Students</td>
+            </tr>
+            <tr><td>Daigo Nakajima</td><td>Undergraduate</td></tr>
+            <tr><td>Senta Hishida</td><td>Undergraduate</td></tr>
+            <tr><td>Yuki Minase</td><td>Undergraduate</td></tr>
+
+            <!-- OBセクション -->
+            <tr class="group group-ob">
+                <td colspan="2">Alumni (OB)</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="ob-list">
+                          Takahashi Yoshiki, Fang Yichu, Fei Xiaoxiao, Yamamoto Ryohei, Nakao Keisuke, Ide Rino, Hirota Yuji, Inamoto Kouya,  Kojima Yuusuke,  Kondou Sinaya,  Suda Toshimitu,  Matui Yuuki,  Mikawa Kazunori, Ogawa Kenta,  Tsukamoto Taisho,  Yanagihara Kentaro,  Murase Tomoya,  Takahashi Yoshiki,  Liu Enfu, Nakagawa Sho, Sugegaya Naotoshi, Ando Masatoshi, Inagaki Yousuke, Chokushi Yuuto, Hnada Shougo, Sugimoto Tetsuya, Takeuchi Hiroyasu, Yoshida Kazuya, Kadoya Soutoku, Hayashi Yuuki, Endo Ryohei, Kondo Kensuke, Nagasaka Tomomi, Hashimoto Taku, Suzuki Takayuki, Sekijima Syuhei, Ishimaru Tetsuya, Ikeda Kouichirou, Ozaki Yukihiro, Yagi Tatsuya, Matsuzaki Yuushi, Tani Yuutarou, Ando Shinji, Saeki Kenichi, Nakamura Jouji, Uesaka Ikuyo, Tsubouchi Daiki , Daito Takehiro, Ishida Yukinori,Takahashi Souma, Kurauchi Kanya, Ishise Shinya, Nakata Haruki,Ye Minying, Yamaguchi Kouichirou, Sugimoto Takuma, Takeda Koji, Mizutani Ryota, Ishikawa Yuuki, Yang Naiming, Inagami Kazunori, Ye Haoming
+                    </div>
+                </td>
+            </tr>
+
+            <!-- Add more alumni as needed -->
+        </tbody>
+    </table>
+    <script>
+        function searchTable() {
+            const input = document.getElementById("searchInput");
+            const filter = input.value.toLowerCase();
+            const rows = document.querySelectorAll("#memberTable tbody tr");
+
+            rows.forEach(row => {
+                if (row.classList.contains('group')) return;
+                const nameCell = row.cells[0];
+                if (nameCell) {
+                    const name = nameCell.textContent || nameCell.innerText;
+                    row.style.display = name.toLowerCase().includes(filter) ? "" : "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
