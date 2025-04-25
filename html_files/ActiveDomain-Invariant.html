@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>論文タイトル - CVPR 2024</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #ffffff;
+      color: #000000;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 22px;
+      margin-top: 30px;
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 5px;
+    }
+    .authors {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .abstract {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-left: 5px solid #007acc;
+      margin-bottom: 30px;
+    }
+    .abstract p {
+      margin-bottom: 15px;
+    }
+    .links a {
+      display: inline-block;
+      margin-right: 15px;
+      color: #007acc;
+      text-decoration: none;
+    }
+    .bibtex {
+      background-color: #f9f9f9;
+      padding: 15px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      border: 1px solid #ccc;
+      margin-bottom: 30px;
+    }
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .images img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+    .keywords {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border: 1px dashed #007acc;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Active Domain-Invariant Self-Localization Using Ego-Centric and World-Centric Maps ⋆</h1>
+
+  <div class="authors">
+    Kanya Kurauchi, Kanji Tanaka, Ryogo Yamamoto1, and Mitsuki Yoshida1  </div>
+
+  <h2>Keywords</h2>
+  <div class="keywords">
+    Visual robot place recognition, Domain-invariant next-best-view planner, Transferring convnet features
+  </div>
+
+  <h2>Abstract</h2>
+  <div class="abstract">
+    <p>Abstract. The training of a next-best-view (NBV) planner for visual place recognition (VPR) is a fundamentally important task in autonomous robot navigation, for which a typical approach is the use of visual experi- ences that are collected in the target domain as training data. However, the collection of a wide variety of visual experiences in everyday nav- igation is costly and prohibitive for real-time robotic applications. We address this issue by employing a novel domain-invariant NBV planner. A standard VPR subsystem based on a convolutional neural network (CNN) is assumed to be available, and its domain-invariant state recog- nition ability is proposed to be transferred to train the domain-invariant NBV planner. Specifically, we divide the visual cues that are available from the CNN model into two types: the output layer cue (OLC) and intermediate layer cue (ILC). The OLC is available at the output layer of the CNN model and aims to estimate the state of the robot (e.g., the robot viewpoint) with respect to the world-centric view coordinate sys- tem. The ILC is available within the middle layers of the CNN model as a high-level description of the visual content (e.g., a saliency image) with respect to the ego-centric view. In our framework, the ILC and OLC are mapped to a state vector and subsequently used to train a multiview NBV planner via deep reinforcement learning. Experiments using the public NCLT dataset validate the effectiveness of the proposed method.</p>
+  </div>
+
+  <h2>関連資料</h2>
+  <div class="links">
+    <a href="論文PDFへのリンク">[PDF]</a>
+    <a href="補足資料へのリンク">[Supplementary]</a>
+    <a href="arXivへのリンク">[arXiv]</a>
+    <a href="コードへのリンク">[Code]</a>
+  </div>
+
+  <h2>BibTeX</h2>
+  <div class="bibtex">
+@InProceedings{著者名_2024_CVPR,
+  author    = {著者名1 and 著者名2 and 著者名3},
+  title     = {論文タイトル},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  month     = {June},
+  year      = {2024},
+  pages     = {開始ページ–終了ページ}
+}
+  </div>
+
+  <h2>図表・写真</h2>
+  <div class="images">
+    <img src="path_to_image1.jpg" alt="図1 説明">
+    <img src="path_to_image2.jpg" alt="図2 説明">
+  </div>
+
+</body>
+</html>
