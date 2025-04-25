@@ -3,96 +3,156 @@
 <head>
   <meta charset="UTF-8">
   <title>Intelligent Robot Lab</title>
+  <style>
+    body {
+      font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2em;
+      background-color: white;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1a1a1a;
+      margin-bottom: 1em;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.3em;
+      margin-top: 2em;
+      color: #2c3e50;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5em;
+    }
+
+    ul li {
+      margin-bottom: 0.5em;
+    }
+
+    a {
+      text-decoration: none;
+      color: #2a7ae2;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 1em 0;
+    }
+
+    svg {
+      display: block;
+      margin: 2em auto;
+    }
+
+    /* コメントはそのまま */
+  </style>
 </head>
 <body>
 
-<h1>Intelligent Robot Lab.</h1>
+  <div class="container">
+    <h1>Intelligent Robot Lab.</h1>
 
-<h2>Contents</h2>
-<ul>
-  <li><a href="#research">Research</a></li>
-  <li><a href="#projects">Projects</a></li>
-  <li><a href="#approach">Approach</a></li>
-  <li><a href="html_files/member_en_20250425.html">Members</a></li>
-  <li><a href="html_templete/research_temp_improved.html">Test2</a></li>
+    <h2>Contents</h2>
+    <ul>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="html_files/member_en_20250425.html">Members</a></li>
+      <li><a href="html_templete/research_temp_improved.html">Test2</a></li>
 
-  <!-- 新しいリンクを追加する場合は、以下のようにコピペしてください。
-  <li><a href="html_files/newfile.html">New Title</a></li>
-  -->
-</ul>
+      <!-- 新しいリンクを追加する場合は、以下のようにコピペしてください。
+      <li><a href="html_files/newfile.html">New Title</a></li>
+      -->
+    </ul>
 
-<h2 id="research">Research</h2>
-<hr>
-<p>
-  Our primary research goal is to develop novel and effective methods
-  to enable effective robotic mapping and localization, allowing autonomous
-  mobile robots to accomplish safe and efficient navigation. Our research
-  interests include robot vision, pattern recognition, machine learning, scene
-  understanding, visual tracking, filtering &amp; optimization, database &amp;
-  information retrieval, and data compression &amp; recovery.
-</p>
+    <h2 id="research">Research</h2>
+    <hr>
+    <p>
+      Our primary research goal is to develop novel and effective methods
+      to enable effective robotic mapping and localization, allowing autonomous
+      mobile robots to accomplish safe and efficient navigation. Our research
+      interests include robot vision, pattern recognition, machine learning, scene
+      understanding, visual tracking, filtering &amp; optimization, database &amp;
+      information retrieval, and data compression &amp; recovery.
+    </p>
 
-<h2 id="projects">Projects</h2>
-<hr>
-<ul>
-  <li><a href="html_files/VPR-to-NBV.htm">VPR-to-NBV</a></li>
-  <li><a href="html_files/DarkReciprocalRank.htm">Dark Reciprocal Rank</a></li>
-  <li><a href="html_files/DetectionByLocalization.html">Detection-by-Localization</a></li>
-  <li><a href="html_files/LocalizationDifficultyIndex.html">Localization Difficulty Index</a></li>
-  <li><a href="html_files/LocalMapDescriptorCompressiveChangeRetrieval.html">Compressive Change Retrieval</a></li>
-  <li><a href="html_files/Map-to-TextLocalMapDescriptor.html">Local Map Descriptor</a></li>
-  <li><a href="html_files/Cross-season%20Localization.html">Cross-season Localization</a></li>
-  <li><a href="html_files/project5.html">Visual Experience Mining</a></li>
-  <li><a href="html_files/project3.html">Bag-of-Bounding-Boxes</a></li>
-  <li><a href="html_files/project4.html">Part SLAM</a></li>
-  <li><a href="html_files/project1.html">Compressive SLAM</a></li>
-  <li><a href="html_files/project2.html">Compact Binary Map</a></li>
-  <li><a href="html_files/research_iwata.html">Iwata</a></li>
-  <li><a href="html_files/ActiveDomain-Invariant.html">ActiveDomain-Invariant</a></li>
-  <li><a href="html_files/RobotTraversability.html">RobotTraversability</a></li>
-  <li><a href="html_files/ActiveSemanticLocalizationwithGraph.html">Active Semantic Localization with Graph</a></li>
-  <li><a href="html_files/ONasALCActive.html">ON as ALC Active</a></li>
-  <li><a href="html_files/LMD-PGN.html">LMD-PGN</a></li>
-</ul>
+    <h2 id="projects">Projects</h2>
+    <hr>
+    <ul>
+      <li><a href="html_files/VPR-to-NBV.htm">VPR-to-NBV</a></li>
+      <li><a href="html_files/DarkReciprocalRank.htm">Dark Reciprocal Rank</a></li>
+      <li><a href="html_files/DetectionByLocalization.html">Detection-by-Localization</a></li>
+      <li><a href="html_files/LocalizationDifficultyIndex.html">Localization Difficulty Index</a></li>
+      <li><a href="html_files/LocalMapDescriptorCompressiveChangeRetrieval.html">Compressive Change Retrieval</a></li>
+      <li><a href="html_files/Map-to-TextLocalMapDescriptor.html">Local Map Descriptor</a></li>
+      <li><a href="html_files/Cross-season%20Localization.html">Cross-season Localization</a></li>
+      <li><a href="html_files/project5.html">Visual Experience Mining</a></li>
+      <li><a href="html_files/project3.html">Bag-of-Bounding-Boxes</a></li>
+      <li><a href="html_files/project4.html">Part SLAM</a></li>
+      <li><a href="html_files/project1.html">Compressive SLAM</a></li>
+      <li><a href="html_files/project2.html">Compact Binary Map</a></li>
+      <li><a href="html_files/research_iwata.html">Iwata</a></li>
+      <li><a href="html_files/ActiveDomain-Invariant.html">ActiveDomain-Invariant</a></li>
+      <li><a href="html_files/RobotTraversability.html">RobotTraversability</a></li>
+      <li><a href="html_files/ActiveSemanticLocalizationwithGraph.html">Active Semantic Localization with Graph</a></li>
+      <li><a href="html_files/ONasALCActive.html">ON as ALC Active</a></li>
+      <li><a href="html_files/LMD-PGN.html">LMD-PGN</a></li>
+    </ul>
 
-<h2 id="approach">Approach</h2>
-<hr>
-<p><b>Map Matching</b></p>
-<p>
-  Since 1995, we are particularly interested in map matching, the ability to match a local map built by a mobile
-  robot to previously built maps, which is crucial in many robotic mapping, self-localization, and simultaneous
-  localization and mapping (SLAM) applications. The goal of map matching is given a pair of input maps, to find a
-  transformation (e.g., rotation, translation) from one map to the other. One of the most popular solutions to the map
-  matching is RANSAC, in which a number of hypotheses of the transformation are generated from a minimal set of map
-  features while each hypothesis is verified using the remaining features as a cue. Other solutions include information
-  reduction with dimension reduction techniques. The map matching task is particularly important in the following
-  contexts:
-</p>
+    <h2 id="approach">Approach</h2>
+    <hr>
+    <p><b>Map Matching</b></p>
+    <p>
+      Since 1995, we are particularly interested in map matching, the ability to match a local map built by a mobile
+      robot to previously built maps, which is crucial in many robotic mapping, self-localization, and simultaneous
+      localization and mapping (SLAM) applications. The goal of map matching is given a pair of input maps, to find a
+      transformation (e.g., rotation, translation) from one map to the other.
+    </p>
 
-<ul>
-  <li>Map updating. Change detection is an important task for updating maps in non-stationary environments. Map
-    matching between a pair of environment maps generated at two different points in time provides cues for change
-    detection. [* Hongbin Zha, Kanji Tanaka, Tsutomu Hasegawa, Detecting Changes in a Dynamic Environment for Updating
-    its Maps by Using a Mobile Robot, Proc. IEEE/RSJ Int. Conf. Intelligent Robots and Systems (IROS), 1997.]</li>
-  
-  <li>Map merging. Map matching is also an important tool for aligning multiple maps with different coverage and
-    merging them into a global environment map. [* Kanji Tanaka, Eiji Kondo, Incremental RANSAC for online relocation
-    in large dynamic environments, Proc. Int. Conf. Robotics and Automation (ICRA), 2006.]</li>
+    <p>
+      One of the most popular solutions to the map matching is RANSAC, in which a number of hypotheses of the transformation are
+      generated from a minimal set of map features while each hypothesis is verified using the remaining features as a cue. Other
+      solutions include information reduction with dimension reduction techniques.
+    </p>
 
-  <li>Map retrieval. Map matching is a standard building block of map retrieval. Map retrieval is usually an important
-    first step of global robot self-localization with respect to an environment map. [* Kanji Tanaka, Tsutomu Hasegawa,
-    Hongbin Zha, Eiji Kondo, Nobuhiro Okada, Mobile Robot Localization with an Incomplete Map in Non-Stationary
-    Environments, Proc. Int. Conf. Robotics and Automation (ICRA), 2003.]</li>
+    <p>The map matching task is particularly important in the following contexts:</p>
+    <ul>
+      <li>Map updating: Change detection between two environment maps built at different times.  
+        [* Hongbin Zha, Kanji Tanaka, Tsutomu Hasegawa, IROS 1997]</li>
+      <li>Map merging: Aligning and merging maps into a global one.  
+        [* Kanji Tanaka, Eiji Kondo, ICRA 2006]</li>
+      <li>Map retrieval: Initial step in global self-localization.  
+        [* Tanaka et al., ICRA 2003]</li>
+      <li>Map compression: Discovering common segments across maps.  
+        [* Tomomi Nagasaka, Kanji Tanaka, ICRA 2011]</li>
+    </ul>
 
-  <li>Map compression. Map co-segmentation, the task of discovering map segments that commonly appear in multiple
-    different maps, is important for unsupervised map compression and map segmentation. Map matching is an essential
-    building block of map co-segmentation. [* Tomomi Nagasaka, Kanji Tanaka, Dictionary-based Map Compression for Sparse
-    Feature Maps, Proc. Int. Conf. Robotics and Automation (ICRA), 2011.]</li>
-</ul>
-
-<!-- 元のSVG -->
-<svg height="96px" viewBox="0 0 66 66" width="96px" xmlns="http://www.w3.org/2000/svg">
-</svg>
+    <svg height="96px" viewBox="0 0 66 66" width="96px" xmlns="http://www.w3.org/2000/svg">
+      <!-- SVG content remains unchanged -->
+    </svg>
+  </div>
 
 </body>
 </html>
