@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>論文タイトル - CVPR 2024</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #ffffff;
+      color: #000000;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 22px;
+      margin-top: 30px;
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 5px;
+    }
+    .authors {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .abstract {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-left: 5px solid #007acc;
+      margin-bottom: 30px;
+    }
+    .abstract p {
+      margin-bottom: 15px;
+    }
+    .links a {
+      display: inline-block;
+      margin-right: 15px;
+      color: #007acc;
+      text-decoration: none;
+    }
+    .bibtex {
+      background-color: #f9f9f9;
+      padding: 15px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      border: 1px solid #ccc;
+      margin-bottom: 30px;
+    }
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .images img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+    .keywords {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border: 1px dashed #007acc;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Active Semantic Localization with Graph Neural Embedding</h1>
+
+  <div class="authors">
+    Mitsuki Yoshida, Kanji Tanaka, Ryogo Yamamoto, Daiki Iwata  </div>
+
+  <h2>Keywords</h2>
+  <div class="keywords">
+  Terms— graph neural embeddings, active semantic localization, knowledge transfer, domain adaptation
+  </div>
+
+  <h2>Abstract</h2>
+  <div class="abstract">
+    <p>Semantic localization, i.e., robot self-localization with semantic image modality, is critical in recently emerging embodied AI applications (e.g., point-goal navigation, object- goal navigation, vision language navigation) and topological mapping applications (e.g., graph neural SLAM, ego-centric topological map). However, most existing works on semantic localization focus on passive vision tasks without viewpoint planning, or rely on additional rich modalities (e.g., depth measurements). Thus, the problem is largely unsolved. In this work, we explore a lightweight, entirely CPU-based, domain-adaptive semantic localization framework, called graph neural localizer. Our approach is inspired by two recently emerging technologies: (1) Scene graph, which combines the viewpoint- and appearance- invariance of local and global features; (2) Graph neural network, which enables direct learn- ing/recognition of graph data (i.e., non-vector data). Specifically, a graph convolutional neural network is first trained as a scene graph classifier for passive vision, and then its knowledge is transferred to a reinforcement-learning planner for active vision. Experiments on two scenarios, self-supervised learning and unsupervised domain adaptation, using a photo-realistic Habitat simulator validate the effectiveness of the proposed method.</p>
+  </div>
+
+  <h2>Related documents</h2>
+  <div class="links">
+    <a href="論文PDFへのリンク">[PDF]</a>
+    <a href="補足資料へのリンク">[Supplementary]</a>
+    <a href=https://arxiv.org/abs/2305.06141>[arXiv]</a>
+    <a href="コードへのリンク">[Code]</a>
+  </div>
+
+  <h2>BibTeX</h2>
+  <div class="bibtex">
+@inproceedings{DBLP:conf/acpr/YoshidaTYI23,
+  author       = {Mitsuki Yoshida and
+                  Kanji Tanaka and
+                  Ryogo Yamamoto and
+                  Daiki Iwata},
+  editor       = {Huimin Lu and
+                  Michael Blumenstein and
+                  Sung{-}Bae Cho and
+                  Cheng{-}Lin Liu and
+                  Yasushi Yagi and
+                  Tohru Kamiya},
+  title        = {Active Semantic Localization with Graph Neural Embedding},
+  booktitle    = {Pattern Recognition - 7th Asian Conference, {ACPR} 2023, Kitakyushu,
+                  Japan, November 5-8, 2023, Proceedings, Part {I}},
+  series       = {Lecture Notes in Computer Science},
+  volume       = {14406},
+  pages        = {216--230},
+  publisher    = {Springer},
+  year         = {2023},
+  url          = {https://doi.org/10.1007/978-3-031-47634-1\_17},
+  doi          = {10.1007/978-3-031-47634-1\_17},
+  timestamp    = {Fri, 23 Aug 2024 07:25:23 +0200},
+  biburl       = {https://dblp.org/rec/conf/acpr/YoshidaTYI23.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+  </div>
+
+  <h2>図表・写真</h2>
+  <div class="images">
+    <img src="path_to_image1.jpg" alt="図1 説明">
+    <img src="path_to_image2.jpg" alt="図2 説明">
+  </div>
+
+</body>
+</html>
