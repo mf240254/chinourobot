@@ -81,10 +81,20 @@
 
   <h2>Abstract</h2>
   <div class="abstract">
-    <p>Abstract. The training of a next-best-view (NBV) planner for visual place recognition (VPR) is a fundamentally important task in autonomous robot navigation, for which a typical approach is the use of visual experi- ences that are collected in the target domain as training data. However, the collection of a wide variety of visual experiences in everyday nav- igation is costly and prohibitive for real-time robotic applications. We address this issue by employing a novel domain-invariant NBV planner. A standard VPR subsystem based on a convolutional neural network (CNN) is assumed to be available, and its domain-invariant state recog- nition ability is proposed to be transferred to train the domain-invariant NBV planner. Specifically, we divide the visual cues that are available from the CNN model into two types: the output layer cue (OLC) and intermediate layer cue (ILC). The OLC is available at the output layer of the CNN model and aims to estimate the state of the robot (e.g., the robot viewpoint) with respect to the world-centric view coordinate sys- tem. The ILC is available within the middle layers of the CNN model as a high-level description of the visual content (e.g., a saliency image) with respect to the ego-centric view. In our framework, the ILC and OLC are mapped to a state vector and subsequently used to train a multiview NBV planner via deep reinforcement learning. Experiments using the public NCLT dataset validate the effectiveness of the proposed method.</p>
+    <p>The training of a next-best-view (NBV) planner for visual place recognition (VPR) is a fundamentally important task 
+      in autonomous robot navigation, for which a typical approach is the use of visual experi- ences that are collected in 
+      the target domain as training data. However, the collection of a wide variety of visual experiences in everyday nav- igation is 
+      costly and prohibitive for real-time robotic applications. We address this issue by employing a novel domain-invariant NBV planner. 
+      A standard VPR subsystem based on a convolutional neural network (CNN) is assumed to be available, and its domain-invariant state recognition
+      ability is proposed to be transferred to train the domain-invariant NBV planner. Specifically, we divide the visual cues that are available
+      from the CNN model into two types: the output layer cue (OLC) and intermediate layer cue (ILC). The OLC is available at the output layer of the 
+      CNN model and aims to estimate the state of the robot (e.g., the robot viewpoint) with respect to the world-centric view coordinate sys- tem. The ILC 
+      is available within the middle layers of the CNN model as a high-level description of the visual content (e.g., a saliency image) with respect to the 
+      ego-centric view. In our framework, the ILC and OLC are mapped to a state vector and subsequently used to train a multiview NBV planner via deep reinforcement learning.
+      Experiments using the public NCLT dataset validate the effectiveness of the proposed method.</p>
   </div>
 
-  <h2>related document</h2>
+  <h2>Related document</h2>
   <div class="links">
     <a href="論文PDFへのリンク">[PDF]</a>
     <a href="補足資料へのリンク">[Supplementary]</a>
