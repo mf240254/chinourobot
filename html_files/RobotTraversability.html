@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>論文タイトル - CVPR 2024</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #ffffff;
+      color: #000000;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 22px;
+      margin-top: 30px;
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 5px;
+    }
+    .authors {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .abstract {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-left: 5px solid #007acc;
+      margin-bottom: 30px;
+    }
+    .abstract p {
+      margin-bottom: 15px;
+    }
+    .links a {
+      display: inline-block;
+      margin-right: 15px;
+      color: #007acc;
+      text-decoration: none;
+    }
+    .bibtex {
+      background-color: #f9f9f9;
+      padding: 15px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      border: 1px solid #ccc;
+      margin-bottom: 30px;
+    }
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .images img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+    .keywords {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border: 1px dashed #007acc;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Robot Traversability Prediction: Towards Third-Person-View Extension of Walk2Map with Photometric and Physical Constraints</h1>
+
+  <div class="authors">
+    Jonathan Tay Yu Liang, Kanji Tanaka  </div>
+
+  <h2>Keywords</h2>
+  <div class="keywords">
+
+  </div>
+
+  <h2>Abstract</h2>
+  <div class="abstract">
+    <p>Abstract—Walk2Map has emerged as a promising data- driven method to generate indoor traversability maps based solely on pedestrian trajectories, offering great potential for indoor robot navigation. In this study, we investigate a novel approach called Walk2Map++, which involves replacing Walk2Map’s first-person sensor (i.e., IMU) with a human observing third-person view from the robot’s onboard camera. However, human observation from a third-person camera is significantly ill-posed due to visual uncertainties resulting from occlusion, nonlinear perspective, depth ambiguity, and human- to-human interaction. To regularize the ill-posedness, we pro- pose integrating two types of constraints: photometric (i.e., occlusion ordering) and physical (i.e., collision avoidance). We demonstrate that these constraints can be effectively inferred from the interaction between past and present observations, human trackers, and object reconstructions. We depict the seamless integration of asynchronous map optimization events, like loop closure, into the real-time traversability map, facilitat- ing incremental and efficient map refinement. We validate the efficacy of our enhanced methodology through rigorous fusion and comparison with established techniques, demonstrating its capability to advance traversability prediction in complex indoor environments. The code and datasets associated with this study are available for further research and adoption in the field at https://github.com/jonathantyl97/HO3-SLAM.</p>
+  </div>
+
+  <h2>Related documents</h2>
+  <div class="links">
+    <a href="論文PDFへのリンク">[PDF]</a>
+    <a href="補足資料へのリンク">[Supplementary]</a>
+    <a href="arXivへのリンク">[arXiv]</a>
+    <a href="コードへのリンク">[Code]</a>
+  </div>
+
+  <h2>BibTeX</h2>
+  <div class="bibtex">
+@inproceedings{DBLP:conf/iros/Liang024,
+  author       = {Jonathan Tay Yu Liang and
+                  Kanji Tanaka},
+  title        = {Robot Traversability Prediction: Towards Third-Person-View Extension
+                  of Walk2Map with Photometric and Physical Constraints},
+  booktitle    = {{IEEE/RSJ} International Conference on Intelligent Robots and Systems,
+                  {IROS} 2024, Abu Dhabi, United Arab Emirates, October 14-18, 2024},
+  pages        = {11602--11609},
+  publisher    = {{IEEE}},
+  year         = {2024},
+  url          = {https://doi.org/10.1109/IROS58592.2024.10802356},
+  doi          = {10.1109/IROS58592.2024.10802356},
+  timestamp    = {Fri, 03 Jan 2025 11:28:36 +0100},
+  biburl       = {https://dblp.org/rec/conf/iros/Liang024.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+  </div>
+
+  <h2>図表・写真</h2>
+  <div class="images">
+    <img src="path_to_image1.jpg" alt="図1 説明">
+    <img src="path_to_image2.jpg" alt="図2 説明">
+  </div>
+
+</body>
+</html>
