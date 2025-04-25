@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>論文タイトル - CVPR 2024</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #ffffff;
+      color: #000000;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 22px;
+      margin-top: 30px;
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 5px;
+    }
+    .authors {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .abstract {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-left: 5px solid #007acc;
+      margin-bottom: 30px;
+    }
+    .abstract p {
+      margin-bottom: 15px;
+    }
+    .links a {
+      display: inline-block;
+      margin-right: 15px;
+      color: #007acc;
+      text-decoration: none;
+    }
+    .bibtex {
+      background-color: #f9f9f9;
+      padding: 15px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      border: 1px solid #ccc;
+      margin-bottom: 30px;
+    }
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .images img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+    .keywords {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border: 1px dashed #007acc;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ON as ALC: Active Loop Closing Object Goal Navigation</h1>
+
+  <div class="authors">
+    Daiki Iwata Kanji Tanaka Shoya Miyazaki Kouki Terashima  </div>
+
+  <h2>Keywords</h2>
+  <div class="keywords">
+  Terms— graph neural embeddings, active semantic localization, knowledge transfer, domain adaptation
+  </div>
+
+  <h2>Abstract</h2>
+  <div class="abstract">
+    <p>In simultaneous localization and mapping, active loop closing (ALC) is an active vision problem that aims to visually guide a robot to maximize the chances of re- visiting previously visited points, thereby resetting the drift errors accumulated in the incrementally built map during travel. However, current mainstream navigation strategies that leverage such incomplete maps as workspace prior knowledge often fail in modern long-term autonomy long-distance travel scenarios where map accumulation errors become significant. To address these limitations of map-based navigation, this paper is the first to explore mapless navigation in the embodied AI field, in particular, to utilize object-goal navigation (commonly abbreviated as ON, ObjNav, or OGN) techniques that efficiently explore target objects without using such a prior map. Specif- ically, in this work, we start from an off-the-shelf mapless ON planner, extend it to utilize a prior map, and further show that the performance in long-distance ALC (LD-ALC) can be maximized by minimizing “ALC loss” and “ON loss”. This study highlights a simple and effective approach, called ALC- ON (ALCON), to accelerate the progress of challenging long- distance ALC technology by leveraging the growing frontier- guided, data-driven, and LLM-guided ON technologies.</p>
+  </div>
+
+  <h2>Related documents</h2>
+  <div class="links">
+    <a href="論文PDFへのリンク">[PDF]</a>
+    <a href="補足資料へのリンク">[Supplementary]</a>
+    <a href=https://arxiv.org/abs/2412.11523>[arXiv]</a>
+    <a href="コードへのリンク">[Code]</a>
+  </div>
+
+  <h2>BibTeX</h2>
+  <div class="bibtex">
+@article{DBLP:journals/corr/abs-2412-11523,
+  author       = {Daiki Iwata and
+                  Kanji Tanaka and
+                  Shoya Miyazaki and
+                  Kouki Terashima},
+  title        = {{ON} as {ALC:} Active Loop Closing Object Goal Navigation},
+  journal      = {CoRR},
+  volume       = {abs/2412.11523},
+  year         = {2024},
+  url          = {https://doi.org/10.48550/arXiv.2412.11523},
+  doi          = {10.48550/ARXIV.2412.11523},
+  eprinttype    = {arXiv},
+  eprint       = {2412.11523},
+  timestamp    = {Wed, 22 Jan 2025 08:57:18 +0100},
+  biburl       = {https://dblp.org/rec/journals/corr/abs-2412-11523.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+  </div>
+
+  <h2>図表・写真</h2>
+  <div class="images">
+    <img src="path_to_image1.jpg" alt="図1 説明">
+    <img src="path_to_image2.jpg" alt="図2 説明">
+  </div>
+
+</body>
+</html>
