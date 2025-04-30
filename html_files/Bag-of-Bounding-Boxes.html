@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>PartSLAM: Unsupervised Part-based Scene Modeling for Fast Succinct Map Matching - IROS 2013 </title>
+  <title>Common Landmark Discovery for Object-Level View Image Retrieval: Modeling and Matching of Scenes via Bag-of-Bounding-Boxes - ACPR 2013 </title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -69,10 +69,10 @@
 </head>
 <body>
 
-  <h1>PartSLAM: Unsupervised Part-based Scene Modeling for Fast Succinct Map Matching</h1>
+  <h1>Common Landmark Discovery for Object-Level View Image Retrieval: Modeling and Matching of Scenes via Bag-of-Bounding-Boxes</h1>
 
   <div class="authors">
-    Hanada Shogo, Tanaka Kanji  </div>
+    Ando Masatoshi, Kanji Tanaka, Yousuke Inagaki, Yuuto Chokushi, Shogo Hanada  </div>
 
   <h2>Keywords</h2>
   <div class="keywords">
@@ -81,33 +81,36 @@
 
   <h2>Abstract</h2>
   <div class="abstract">
-    <p>In this paper, we explore the challenging 1-to-N map matching problem, which exploits a compact description of map data, to improve the scalability of map matching techniques used by various robot vision tasks. We propose a first method explicitly aimed at fast succinct map matching, which consists only of map-matching subtasks. These tasks include offline map matching attempts to find a compact part-based scene model that effectively explains each map using fewer larger parts. The tasks also include an online map matching attempt to efficiently find correspondence between the partbased maps. Our part-based scene modeling approach is unsupervised and uses common pattern discovery (CPD) between the input and known reference maps. This enables a robot to learn a compact map model without human intervention. We also present a practical implementation that uses the state-of-theart CPD technique of randomized visual phrases (RVP) with a compact bounding box (BB) based part descriptor, which consists of keypoint and descriptor BBs. The results of our challenging map-matching experiments, which use a publicly available radish dataset, show that the proposed approach achieves successful map matching with significant speedup and a compact description of map data that is tens of times more compact. Although this paper focuses on the standard 2D pointset map and the BB-based part representation, we believe our approach is sufficiently general to be applicable to a broad range of map formats, such as the 3D point cloud map, as well as to general bounding volumes and other compact part representations.</p>
+    <p>Object-level view image retrieval for robot vision applications has been actively studied recently, as they can provide semantic and compact method for efficient scene matching. In existing frameworks, landmark objects are extracted from an input view image by a pool of pretrained object detectors, and used as an image representation. To improve the compactness and autonomy of object-level view image retrieval, we here present a novel method called ``common landmark discovery". Under this method, landmark objects are mined through common pattern discovery (CPD) between an input image and known reference images. This approach has three distinct advantages. First, the CPD-based object detection is unsupervised, and does not require pretrained object detector. Second, the method attempts to find fewer and larger object patterns, which leads to a compact and semantically robust view image descriptor. Third, the scene matching problem is efficiently solved as a lower-dimensional problem of computing region overlaps between landmark objects, using a compact image representation in a form of bag-of-bounding-boxes (BoBB).</p>
   </div>
 
   <h2>Related document</h2>
   <div class="links">
-    <a href="https://arxiv.org/pdf/2306.10782">[PDF]</a>
+    <a href="">[PDF]</a>
     <a href="補足資料へのリンク">[Supplementary]</a>
-    <a href="https://arxiv.org/abs/2306.10782">[arXiv]</a>
+    <a href="">[arXiv]</a>
     <a href="コードへのリンク">[Code]</a>
   </div>
 
   <h2>BibTeX</h2>
   <div class="bibtex">
-@inproceedings{DBLP:conf/iros/ShogoK13,
-  author       = {Shogo Hanada and
-                  Kanji Tanaka},
-  title        = {PartSLAM: Unsupervised part-based scene modeling for fast succinct
-                  map matching},
-  booktitle    = {2013 {IEEE/RSJ} International Conference on Intelligent Robots and
-                  Systems, {IROS} 2013, Tokyo, Japan, November 3-7, 2013},
-  pages        = {1582--1588},
+@inproceedings{DBLP:conf/acpr/MasatoshiKYYS13,
+  author       = {Masatoshi Ando and
+                  Kanji Tanaka and
+                  Yousuke Inagaki and
+                  Yuuto Chokushi and
+                  Shogo Hanada},
+  title        = {Common Landmark Discovery for Object-Level View Image Retrieval: Modeling
+                  and Matching of Scenes via Bag-of-Bounding-Boxes},
+  booktitle    = {2nd {IAPR} Asian Conference on Pattern Recognition, {ACPR} 2013, Naha,
+                  Japan, November 5-8, 2013},
+  pages        = {43--48},
   publisher    = {{IEEE}},
   year         = {2013},
-  url          = {https://doi.org/10.1109/IROS.2013.6696560},
-  doi          = {10.1109/IROS.2013.6696560},
-  timestamp    = {Thu, 28 Sep 2023 20:45:52 +0200},
-  biburl       = {https://dblp.org/rec/conf/iros/ShogoK13.bib},
+  url          = {https://doi.org/10.1109/ACPR.2013.19},
+  doi          = {10.1109/ACPR.2013.19},
+  timestamp    = {Mon, 25 Sep 2023 20:37:18 +0200},
+  biburl       = {https://dblp.org/rec/conf/acpr/MasatoshiKYYS13.bib},
   bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
   </div>
