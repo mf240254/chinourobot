@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Local Map Descriptor for Compressive Change Retrieval - ROBIO 2016 </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #ffffff;
+      color: #000000;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 22px;
+      margin-top: 30px;
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 5px;
+    }
+    .authors {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .abstract {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-left: 5px solid #007acc;
+      margin-bottom: 30px;
+    }
+    .abstract p {
+      margin-bottom: 15px;
+    }
+    .links a {
+      display: inline-block;
+      margin-right: 15px;
+      color: #007acc;
+      text-decoration: none;
+    }
+    .bibtex {
+      background-color: #f9f9f9;
+      padding: 15px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      border: 1px solid #ccc;
+      margin-bottom: 30px;
+    }
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .images img {
+      max-width: 50%;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+    .keywords {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border: 1px dashed #007acc;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Local Map Descriptor for Compressive Change Retrieval</h1>
+
+  <div class="authors">
+    Tanaka Kanji, Murase Tomoya  </div>
+
+  <h2>Keywords</h2>
+  <div class="keywords">
+    
+  </div>
+
+  <h2>Abstract</h2>
+  <div class="abstract">
+    <p>Change detection, i.e., anomaly detection from local maps built by a mobile robot at multiple different times, is a challenging problem to solve in practice. Most previous work either cannot be applied to scenarios where the size of the map collection is large, or simply assumed that the robot self-location is globally known. In this paper, we tackle the problem of simultaneous self-localization and change detection, by reformulating the problem as a map retrieval problem, and propose a local map descriptor with a compressed bag-of-words (BoW) structure as a scalable solution. We make the following contributions. (1) To enable a direct comparison of the spatial layout of visual features between different local maps, the origin of the local map coordinate (termed “viewpoint”) is planned by scene parsing and determined by our “viewpoint planner” to be invariant against small variations in self-location and changes, aiming at providing similar viewpoints for similar scenes (i.e., the relevant map pair). (2) We extend the BoW model to enable the use of not only the appearance (e.g., polestar) but also the spatial layout (e.g., spatial pyramid) of visual features with respect to the planned viewpoint. The key observation is that the planned viewpoint (i.e., the origin of local map coordinate) acts as a pseudo viewpoint that is usually required by spatial BoW (e.g., SPM) and also by anomaly detection (e.g., NN-d, LOF). (3) Experimental results on a challenging “loop-closing” scenario show that the proposed method outperforms previous BoW methods in self-localization, and furthermore, that the use of both appearance and pose information in change detection produces better results than the use of either information alone.</p>
+  </div>
+
+  <h2>Related document</h2>
+  <div class="links">
+    <a href="https://arxiv.org/pdf/1603.00980">[PDF]</a>
+    <a href="補足資料へのリンク">[Supplementary]</a>
+    <a href="https://arxiv.org/abs/1603.00980">[arXiv]</a>
+    <a href="コードへのリンク">[Code]</a>
+  </div>
+
+  <h2>BibTeX</h2>
+  <div class="bibtex">
+@inproceedings{DBLP:conf/robio/Tanaka16,
+  author       = {Kanji Tanaka},
+  title        = {Local map descriptor for compressive change retrieval},
+  booktitle    = {2016 {IEEE} International Conference on Robotics and Biomimetics,
+                  {ROBIO} 2016, Qingdao, China, December 3-7, 2016},
+  pages        = {2151--2158},
+  publisher    = {{IEEE}},
+  year         = {2016},
+  url          = {https://doi.org/10.1109/ROBIO.2016.7866648},
+  doi          = {10.1109/ROBIO.2016.7866648},
+  timestamp    = {Thu, 28 Sep 2023 20:45:51 +0200},
+  biburl       = {https://dblp.org/rec/conf/robio/Tanaka16.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+  </div>
+
+  <h2>図表・写真</h2>
+  <div class="images">
+    <img src="../images_file//image1.png" alt="Fig. 1">
+      <figcaption>.</figcaption>
+    <img src="../images_file//image2.png" alt="図2 説明">
+<figcaption>a</figcaption>
+  </div>
+
+</body>
+</html>
