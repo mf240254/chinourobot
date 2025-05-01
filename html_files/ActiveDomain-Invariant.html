@@ -131,19 +131,40 @@
   </div>
 
   <h2>図表・写真</h2>
-  <div class="images">
-    <img src="../images_file/ActiveDomainInvariant/image1.png" alt="Fig. 1">
-      <figcaption>Fig. 1. The training of a next-best-view (NBV) planner for visual robot place recogni-
+  <div style="text-align: left;">
+        <img src="../images_file/ActiveDomainInvariant/image1.png" alt="Fig1" style="max-width: 60%;">
+        <p>Fig. 1. The training of a next-best-view (NBV) planner for visual robot place recogni-
 tion (VPR) is fundamentally important for autonomous robot navigation. In this study,
 instead of the common path of training from visual experiences, we exploit a standard
 single-view VPR model using a deep CNN as the source of training data. Specifically,
 we divide the visual cues that are available from the CNN model into two types: the
 OLC and ILC, and fuse the OLC and ILC into a new state vector to reformulate the
 NBV planning as a domain-invariant task. Heat maps are overlaid on the images to
-visualize the OLC/ILC values.</figcaption>
-    <img src="../images_file/ActiveDomainInvariant/image2.png" alt="図2 説明">
-<figcaption>a</figcaption>
-  </div>
+visualize the OLC/ILC values.
+  </p></div>
+  
+  <div style="text-align: left;">
+      <img src="../images_file/ActiveDomainInvariant/image2.png" alt="Fig2" style="max-width: 60%;">
+      <p>Fig. 2. Active VPR framework. The NBV planner is trained by transferring the state
+  recognition ability of the CNN model for single-view VPR. Two types of cues, namely
+  the CNN OLC (“viewpoint-specific PDV") and CNN ILC (“saliency image"), are extracted and transferred from the CNN.
+    </p></div>
+  
+  <div style="text-align: left;">
+      <img src="../images_file/ActiveDomainInvariant/image3.png" alt="Fig3" style="max-width: 60%;">
+      <p>Fig. 3. Experimental environment. Top: entire trajectories and Segway vehicle robot.
+        Bottom: views from onboard front-facing camera in different seasons.
+    </p></div>
+  
+  <div style="text-align: left;">
+      <p><strong>Table1：</strong>Performance results</p>
+      <img src="../images_file/ActiveDomainInvariant/table1.png" alt="Table1" style="max-width: 45%;">
 
+  <div style="text-align: left;">
+      <img src="../images_file/ActiveDomainInvariant/image4.png" alt="Fig4" style="max-width: 60%;">
+      <p>Fig. 4. Example results. The view image sequences at the NBVs planned by the proposed method (left) and by the random method
+        (right) are depicted for three different starting viewpoints. The panels from left to right show the view images at the 1st,
+        2nd, 3rd, and 4th viewpoints.
+  </p></div>
 </body>
 </html>
