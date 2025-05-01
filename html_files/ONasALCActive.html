@@ -114,10 +114,52 @@
   </div>
 
   <h2>図表・写真</h2>
-  <div class="images">
-    <img src="path_to_image1.jpg" alt="図1 説明">
-    <img src="path_to_image2.jpg" alt="図2 説明">
+  <div style="text-align: left;">
+        <img src="../images_file/ONasALC/image1.png" alt="Fig1" style="max-width: 60%;">
+        <p>Fig. 1. Long-distance ALC (LD-ALC) problem. The ellipse represents the error ellipse,
+          and the numbers next to the curve are sample travel distances. In contrast to the short-distance
+          travel ALC scenario (blue line), the long-distance travel ALC scenario (red line) significantly impacts
+          the map cumulative error reset caused by loop closing and presents a higher level of difficulty (LoD).
+          This makes it both a practical and challenging problem, which is the focus of our interest.
+  </p></div>
+  
+  <div style="text-align: left;">
+        <img src="../images_file/ONasALC/image2.png" alt="Fig2" style="max-width: 60%;">
+        <p>Fig. 2. System overview. The ALC planner is formulated as an active SLAM system’s waypoint planner module,
+          which is responsible for planning waypoints (subgoals). (a) Role of the existing waypoint planner in the Active
+          SLAM system. (b) Structure of the proposed extended waypoint planner. The map-less ON planner block, marked with
+          a red box and white text, has been introduced.
+  </p></div>
+  
+  <div style="text-align: left;">
+        <img src="../images_file/ONasALC/image3.png" alt="Fig3" style="max-width: 60%;">
+        <p>Fig. 3. ALC taxonomy. The robot’s viewpoint path is depicted as a black line with an arrow, and the area
+          observed from each viewpoint without being occluded is illustrated as a circle. (a) Familiar place scenario
+          (line with blue arrow): This represents an ALC scenario where familiar places are mainly traveled, and a closed-form solution exists.
+          (b) Unfamiliar place scenario (line with red arrow): This represents an ALC scenario where unfamiliar places are mainly traveled, and
+          it is highly non-trivial. (c) “Hard” or “maze” scenario (line with green arrow): This represents a difficult ALC scenario in which
+          the robot enters a maze-like domain, which requires a great deal of cost, and the map is contaminated by accumulated errors,
+          and there is a high risk of ultimately failing to revisit PVPs.
+  </p></div>
+  
+  <div style="text-align: left;">
+        <img src="../images_file/ONasALC/image4.png" alt="Fig4" style="max-width: 60%;">
+        <p>Fig. 4. Augmented ON workspace. We generate the workspace for the ALC experiment by extending the standard workspace used in the object
+          goal navigation (ON) literature. Instead of exhaustively generating a large virtual workspace that covers all viewpoints on a long-distance
+          trajectory, we efficiently generate a workspace that covers only viewpoints near revisited points of interest in the ALC task.
+          We then simulate this augmented ON workspace using Habitat-Sim, a standard ON simulator. The meaning of the error ellipse and travel
+          distance sample values follow Figure 1.
+  </p></div>
+  
+  <div style="text-align: left;">
+        <img src="../images_file/ONasALC/image5.png" alt="Fig5" style="max-width: 60%;">
+        <p>Fig. 5. Experimental Setup. Top: Bird’s-eye view of the workspace. Bottom left: 100 target images. Bottom right:
+          Illustration of the exploration and mapping process. (Red curves: robot trajectories, Blue dots: subgoal candidates).
+  </p></div>
+  
+  <div style="text-align: left;">
+    <p><strong>Table1：</strong>PERFORMACNE RESULTS.</p>
+    <img src="../images_file/ONasALC/table1.png" alt="Table1" style="max-width: 45%;">
   </div>
-
 </body>
 </html>
