@@ -123,10 +123,70 @@
   </div>
 
   <h2>図表・写真</h2>
-  <div class="images">
-    <img src="path_to_image1.jpg" alt="図1 説明">
-    <img src="path_to_image2.jpg" alt="図2 説明">
-  </div>
+  <div style="text-align: left;">
+      <img src="../images_file/RobotTraversabilityPrediction/image1.png" alt="Fig1" style="max-width: 60%;">
+      <p>Fig. 1. Vision-based traversability prediction is an open problem in crowded office environments where occlusions and obstacles are rich.
+        In a crowded dynamic scene, it is difficult to obtain a good point cloud map and human detection due to occlusions and obstacles.
+        The left and right panels show the DSO point cloud map and Detectron2 human detection mask, respectively.
+    </p></div>
+  
+  <div style="text-align: left;">
+      <img src="../images_file/RobotTraversabilityPrediction/image2.png" alt="Fig2" style="max-width: 60%;">
+      <p>Fig. 2. Block diagram of framework: All modules are interconnected via ROS (Robot Operating System). The PHYS module comprises DSO (Direct Sparse Odometry) 
+        and is responsible for generating point clouds utilized by other modules. Within the PHOT module, a Human-Object Occlusion Ordering Algorithm is employed to 
+        extract occlusion ordering information, which is then combined with point cloud coordinates derived from Detectron2 human masks. Additionally, the Walk2Map++ 
+        module utilizes human pose estimation to predict human distance from the camera and estimate traversable regions. These traversability maps are visualized using 
+        the rviz visualizer. In the traversability map image, the red box represent the estimated human location, hence the traversable region. The grey path indicates the 
+        traversable region, which has been walked by the human. The grey path is inprinted by the red boxes.
+    </p></div>
 
+  <div style="text-align: left;">
+      <img src="../images_file/RobotTraversabilityPrediction/image3.png" alt="Fig3" style="max-width: 60%;">
+      <p>Fig. 3. Traversability prediction under severe occlusion. Left: Conven- tional first-person-view setup with IMU. Right: Proposed third-person-view monocular vision setup.
+      </p></div>
+  
+  <div style="text-align: left;">
+      <img src="../images_file/RobotTraversabilityPrediction/image4.png" alt="Fig4" style="max-width: 60%;">
+      <p>Fig. 4. Top-left: The projection of point clouds to the keyframes visualize; Top-right: Human mask used for occlusion ordering algorithm; Bottom-left: DSO;
+        Bottom-right: Traversability map visualized with rviz visualizer.
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/RobotTraversabilityPrediction/image5.png" alt="Fig5" style="max-width: 60%;">
+      <p>Fig. 5. (Left, Middle): Human-centric coordinate system. As shown in the middle figure, keypoint 1 and keypoint 8 is used as a reference point of 
+        torso length.(Right): The relationship between occluder’s feature point and occluded human’s region.
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/RobotTraversabilityPrediction/image6.png" alt="Fig6" style="max-width: 60%;">
+      <p>Fig. 6. Left: Occlusion ordering algorithm; Right: Grouped cluster point cloud visualized
+        in rviz visualizer. Purple cluster indicate points that are in front of the human, orange cluster indicate points that are behind of the human.
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/RobotTraversabilityPrediction/image7.png" alt="Fig7" style="max-width: 60%;">
+      <p>Fig. 7. (a) Online Traversability Map: In our traversability map, the red box represents the current camera position while the green box
+        represents the estimated human location. The gray region indicates the human trail, hence the traversable region. The black lines indicates
+        the obstacles or point cloud clusters. (b) Observer Robot set up, with a right-facing monocular camera mounted on the platform of approx. 
+        1m height from ground
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/RobotTraversabilityPrediction/image8.png" alt="Fig8" style="max-width: 60%;">
+      <p>Fig. 8. I-Shape path experimental set up which simulates a crowded indoor scene.
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/RobotTraversabilityPrediction/image9.png" alt="Fig9" style="max-width: 60%;">
+      <p>Fig. 9. Bird’s eye view of obstacles setup of all kinds of configurations, namely I-Configuration, L-Configuration, and T-Configuration. 
+        The gray rectangle box indicates the point cloud data from DSO, hence the tables set up. The green trail is the frame positional data from DSO,
+        and the red triangle is the current camera position, or current frame. Our data collection process is by using a robot equipped with a monocular
+        camera and taking a video footage surrounding the set up.
+  </p></div>
+
+  <div style="text-align: left;">
+      <p><strong>Table1：</strong>Performance results</p>
+      <img src="../images_file/RobotTraversabilityPrediction/table1.png" alt="Table1" style="max-width: 45%;">
+  
 </body>
 </html>
