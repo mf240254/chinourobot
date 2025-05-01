@@ -111,12 +111,67 @@
   </div>
 
   <h2>図表・写真</h2>
-  <div class="images">
-    <img src="../images_file//image1.png" alt="Fig. 1">
-      <figcaption>.</figcaption>
-    <img src="../images_file//image2.png" alt="図2 説明">
-<figcaption>a</figcaption>
-  </div>
+  <div style="text-align: left;">
+      <img src="../images_file/Self-localizationfromImages/image1.png" alt="Fig1" style="max-width: 60%;">
+      <p>Fig. 1. Self-localization with different levels of localization difficulty index (LDI). The LDI of a self-localization task is
+        a decreasing function of view overlap between the query and relevant database image pair. In experiments, we employ SIFT matching with
+        VFC verification (colored line segments) to evaluate the amount of view overlap. All the pairs in the dataset are evaluated and sorted
+        according in ascending order of LDI. Rank in the sorted list (normalized by the list’s length) [%] can be viewed as a prediction of relative
+        difficulty of the corresponding self-localization task. Displayed in figures are samples from self-localization tasks with four different levels of ranks [%].
+    </p></div>
+  
+  <div style="text-align: left;">
+      <img src="../images_file/Self-localizationfromImages/image2.png" alt="Fig2" style="max-width: 60%;">
+      <p>Fig. 2. Experimental environments. Red, yellow, and green lines: viewpoint paths on which dataset #1, #2, and #3 were collected.
+    </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/Self-localizationfromImages/image3.png" alt="Fig3" style="max-width: 60%;">
+      <p>Fig. 3. Sample configurations of viewpoints for different levels of localization difficulties.
+      </p></div>
+  
+  <div style="text-align: left;">
+      <img src="../images_file/Self-localizationfromImages/image4.png" alt="Fig4" style="max-width: 60%;">
+      <p>Fig. 4. Compact binary landmarks. a, b, c, and d: 4 different examples of a query image (top) being explained by one image-level feature and 20 part-level features (bottom).
+        Each scene part is further encoded to a 128-bit binary code, which is visualized by a barcode.
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/Self-localizationfromImages/image5.png" alt="Fig5" style="max-width: 60%;">
+      <p>Fig. 5. Effect of asymmetric distance computation (ADC). The figures compare the two different encoding schemes, BoW (top) 
+        and ADC (bottom), using a toy example of a 2D feature space x-y, in the case of the fine library. In the figures, query/database
+        images are located z = 2/z = −2, local features extracted from query/database images are located z = 1/z = −1, and library features
+        (green dots) including NN library features (colored small boxes) are located z = 0. Previous BoW systems (top), which encode both query
+        and database features, frequently fail to identify common library features between query and database images in the case of our fine library.
+        Conversely, ADC, which encodes only database features, not query features, is stable to identify NN library features of individual database
+        features by an online search over the space of library features (i.e., z = 0).
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/Self-localizationfromImages/image6.png" alt="Fig6" style="max-width: 60%;">
+      <p>Fig. 6. Performance vs. difficulty. Vertical axis: ratio of self-localization tasks where the ground truth image pair is top-X ranked
+        for ten different ranges of rank X (X: 0.0-0.1, 0.1-0.2, ... , 0.9-1.0.). Horizontal axis: view overlap in terms of number of VFC matches,
+        which is a decreasing function of localization difficulty index.
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/Self-localizationfromImages/image7.png" alt="Fig7" style="max-width: 60%;">
+      <p>Fig. 7. Samples of self-localization tasks. Displayed in figures are samples of self-localization tasks (using “bodw20” algorithm). 
+        We uniformly sampled them from the experiments. For each sample, its query image (left) and the relevant database image (right) are displayed
+        with the view overlap score (“overlap”) as well as the localization performance (“rank”). Here, “rank” is the rank assigned to the ground-truth
+        database relevant image, within a ranked list output by the recognition algorithm. From top to bottom, left to right, these samples are displayed
+        in descending order of view overlap (i.e., from easiest to hardest).
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/Self-localizationfromImages/image8.png" alt="Fig8" style="max-width: 60%;">
+      <p>Fig. 8. Localization performance on relatively easy localization scenarios.
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/Self-localizationfromImages/image9.png" alt="Fig9" style="max-width: 60%;">
+      <p>Fig. 9. Localization performance on relatively hard localization scenarios.
+  </p></div>
 
 </body>
 </html>
