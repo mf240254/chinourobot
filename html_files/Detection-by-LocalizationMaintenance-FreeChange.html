@@ -111,11 +111,31 @@
   </div>
 
   <h2>図表・写真</h2>
-  <div class="images">
-    <img src="../images_file//image1.png" alt="Fig. 1">
-      <figcaption>.</figcaption>
-    <img src="../images_file//image2.png" alt="図2 説明">
-<figcaption>a</figcaption>
+  <div style="text-align: left;">
+    <img src="../images_file/Detection-by-LocalizationMaintenance/image1.png" alt="Fig1" style="max-width: 60%;">
+    <p>
+    Fig. 1. In the detection-by-localization scheme, self-localization performance (i.e., rank value of the “ground-truth” reference
+      image in the map database) is used as a measure of likelihood-of-change (LoC) for change detection. The new generalized problem
+      of object-level change detection, addressed in this paper, takes object-level subimages (instead of a full image) as query input
+      for the self-localization, and outputs a subimage-level pixel-wise LoC map.
+    </p></div>
+
+　<div style="text-align: left;">
+        <img src="../images_file/Detection-by-LocalizationMaintenance/image2.png" alt="Fig2" style="max-width: 60%;">
+        <p>Fig. 2. Estimating LoC map. We consider the new setting where each pixel may belong to multiple subimages (referred to as qBBs).
+          Each subimage is then input to a self-localization system to obtain a rank value, and then the rank value of each pixel is computed
+          from these subimages which the pixel belongs to. In the figure, a rectangle indicates the bounding box of an image or a subimage,
+          and a ’+’ mark indicates the pixel of interest.
+  </p></div>
+
+　<div style="text-align: left;">
+        <img src="../images_file/Detection-by-LocalizationMaintenance/image3.png" alt="Fig3" style="max-width: 60%;">
+        <p>Fig. 3. Experimental settings. Top: the workspace and the robot’s viewpoints of the test images. Bottom: examples of change objects.
+  </p></div>
+  
+  <div style="text-align: left;">
+    <p><strong>Table1：</strong>PERFORMANCE RESULTS</p>
+    <img src="../images_file/Detection-by-LocalizationMaintenance/table1.png" alt="Table1" style="max-width: 45%;">
   </div>
 
 </body>
