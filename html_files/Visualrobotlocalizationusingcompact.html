@@ -112,12 +112,54 @@
   </div>
 
   <h2>図表・写真</h2>
-  <div class="images">
-    <img src="../images_file//image1.png" alt="Fig. 1">
-      <figcaption>.</figcaption>
-    <img src="../images_file//image2.png" alt="図2 説明">
-<figcaption>a</figcaption>
-  </div>
+  <div style="text-align: left;">
+      <img src="../images_file/VisualRobotLocalizationUsingCompact/image1.png" alt="Fig1" style="max-width: 60%;">
+      <p>Fig. 1. How well compact binary landmark representation works in mobile robot localization? (a) Experimental environment and robot’s trajectory.
+        (b) A high-speed car-like mobile robot. (c) Binary landmark representation using the semantic hashing technique. (d) Sequences of images and binary codes.
+        Top, Middle: Two similar locations. Bottom: A dissimilar location. Note that the codes are similar/dissimilar only at a few bits.
+    </p></div>
+  
+  <div style="text-align: left;">
+      <img src="../images_file/VisualRobotLocalizationUsingCompact/image2.png" alt="Fig2" style="max-width: 60%;">
+      <p>Fig. 2. Binary maps. Individual binary codes are viewed as different type independent measurements. We employ K different binary maps
+        for K bit code and then record i-th bit measurements on i-th map. We also discuss how many K ′ (＆lt; K) binary maps are required for successful localization.
+    </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/VisualRobotLocalizationUsingCompact/image3.png" alt="Fig3" style="max-width: 60%;">
+      <p>Fig. 3. Visual localization processing. (a) Input images. (b) Optical flows. (c) Binary codes. (d) Observation likelihood over the robot pose space.
+        (e) Semantic hashing architecture. Left: Pre-training. Middle: Fine-tuning. Right: Encoding. The number of nodes for each layer is also shown in the figures.
+      </p></div>
+  
+  <div style="text-align: left;">
+      <img src="../images_file/VisualRobotLocalizationUsingCompact/image4.png" alt="Fig4" style="max-width: 60%;">
+      <p>Fig. 4. Localization errors for 5 success examples (top) and for 5 failure examples (bottom), randomly sampled from the 100 localization tasks.
+        Vertical axis: location error [m]. Horizontal axis: location ID.
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/VisualRobotLocalizationUsingCompact/image5.png" alt="Fig5" style="max-width: 60%;">
+      <p>Fig. 5. Success ratio vs. #samples (left) and success ratio vs. #bits (right) over the 100 tasks. Each plot corresponds to each value of parameter cL.
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/VisualRobotLocalizationUsingCompact/image6.png" alt="Fig6" style="max-width: 60%;">
+      <p>Fig. 6. Word frequency of ”Outdoor” dataset (left) vs. ”LabelMe” (right).
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/VisualRobotLocalizationUsingCompact/image7.png" alt="Fig7" style="max-width: 60%;">
+      <p>Fig. 7. Frequency of visual words. Top: Average number of landmarks per word. Words are sorted in terms of the number of landmarks
+        they contain and then grouped into 7 groups. Each datapoint from left to right respectively corresponds to the word as well as their
+        near neighbors in terms of Hamming distance 1, 2 and 3. Bottom: Images corresponding to the central words (ID: 1, 5, 50 and 500) of each group.
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/VisualRobotLocalizationUsingCompact/image8.png" alt="Fig8" style="max-width: 60%;">
+      <p>Fig. 8. Localization performance. (a) The semantic hashing localization. Left: The random sampling strategy. Right: The planned sampling strategy.
+        Vertical axis: success ratio. Horizontal axis: the number ∆K of removed binary maps. (b) The LSH-based localization [9]. In some settings
+        (e.g. {∆K:22,”random”}, {L:20,K:20}), the success ratio is unreliable (due to low convergence rate) and omitted.
+      </p></div>
 
 </body>
 </html>
