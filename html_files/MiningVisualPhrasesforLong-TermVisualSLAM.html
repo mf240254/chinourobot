@@ -113,12 +113,63 @@
   </div>
 
   <h2>図表・写真</h2>
-  <div class="images">
-    <img src="../images_file//image1.png" alt="Fig. 1">
-      <figcaption>.</figcaption>
-    <img src="../images_file//image2.png" alt="図2 説明">
-<figcaption>a</figcaption>
-  </div>
+  <div style="text-align: left;">
+      <img src="../images_file/MiningVisualPhrases/image1.png" alt="Fig1" style="max-width: 60%;">
+      <p>Fig. 1. Modeling and matching a pair of scene images (“query”, “database”) using our scene descriptor. A raw image matching process (“CPD”)
+        mines an available visual experience (“known reference image”) to find discriminative visual phrases that effectively explain an input query / database image.
+        The scene matching problem then becomes one of comparing reference image ID and bounding boxes between query and database scenes.
+    </p></div>
+  
+  <div style="text-align: left;">
+      <img src="../images_file/MiningVisualPhrases/image2.png" alt="Fig2" style="max-width: 60%;">
+      <p>Fig. 2. Experimental environments and viewpoint paths (Bird’s eye view). a,b,c,d,e,f,g,h,i,j: 
+        10 paths used for quantitative evaluation. CS: path used for the “cross season” case.
+    </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/MiningVisualPhrases/image3.png" alt="Fig3" style="max-width: 60%;">
+      <p>Fig. 3. Samples of view images used for evaluation.
+      </p></div>
+  
+  <div style="text-align: left;">
+      <img src="../images_file/MiningVisualPhrases/image4.png" alt="Fig4" style="max-width: 60%;">
+      <p>Fig. 4. Examples of common pattern discovery (CPD). s1-4: The single season case. c1-4: The “cross season” case. For each panel,
+        the top row shows CPD for a query image and the bottom row shows CPD for the ground truth database image. For each panel, the left
+        column shows the input image, the middle column shows the reference image selected for CPD, and the right column shows the CPD results, i.e., voting map and BB.
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/MiningVisualPhrases/image5.png" alt="Fig5" style="max-width: 60%;">
+      <p>Fig. 5. Quantitative performance.
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/MiningVisualPhrases/image6.png" alt="Fig6" style="max-width: 60%;">
+      <p>Fig. 6. Results for various #reference images.
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/MiningVisualPhrases/image7.png" alt="Fig7" style="max-width: 60%;">
+      <p>Fig. 7. Selected reference images and their bounding boxes. Top: BBs for reference images. For visualization, the BB for each n-th reference image
+        is normalized to fit within an area [n − 1,n]×[0,1]. Bottom: x10 close-up for x ∈ [0,10].
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/MiningVisualPhrases/image8.png" alt="Fig8" style="max-width: 60%;">
+      <p>Fig. 8. Sensitivity of retrieval performance to the choice of library. The five libraries (a)-(e) are used to explain two different sets of query and database images. 
+        “hetero”: performance when using the library from different viewpoint path. (·) indicates the path ID of the library.
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/MiningVisualPhrases/image9.png" alt="Fig9" style="max-width: 60%;">
+      <p>Fig. 9. Example results of selecting reference images. (a) Frequency of each reference image being selected. (b/c) The four most / least frequent reference images overlaid
+        with all the bounding boxes.
+  </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/MiningVisualPhrases/image10.png" alt="Fig10" style="max-width: 60%;">
+      <p>Fig. 10. Performance on “cross season” case.
+  </p></div>
 
 </body>
 </html>
