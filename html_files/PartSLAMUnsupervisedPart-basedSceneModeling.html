@@ -113,12 +113,46 @@
   </div>
 
   <h2>図表・写真</h2>
-  <div class="images">
-    <img src="../images_file//image1.png" alt="Fig. 1">
-      <figcaption>.</figcaption>
-    <img src="../images_file//image2.png" alt="図2 説明">
-<figcaption>a</figcaption>
-  </div>
+  <div style="text-align: left;">
+      <img src="../images_file/PartSLAM/image1.png" alt="Fig1" style="max-width: 60%;">
+      <p>Fig. 1. Compared to existing direct map matching (“dMM”) methods, our method indirectly matches between the local map and each of the global maps,
+        while using a known reference map as the intermediary. In offline work, a common pattern discovery (“CPD”) process translates an input local/global
+        map to a compact part-based map descriptor (“MD”), by extracting representative parts (colored bounding boxes) that effectively explain an input map
+        from a known reference map. In online work, a descriptor matcher (“DM”) rapidly matches between the compact part-based maps.
+    </p></div>
+  
+  <div style="text-align: left;">
+      <img src="../images_file/PartSLAM/image2.png" alt="Fig2" style="max-width: 60%;">
+      <p>Fig. 2. Three types of map matching schemes considered in this study: direct map matching (dMM), indirect map matching (iMM) and hybrid map matching (hMM). 
+        The dMM scheme directly matches between a given map pair, while the iMM and the hMM schemes match in an indirect manner using a given dictionary map as intermediate. 
+        While iMM deals with a situation where only the compact map descriptors are available, hMM addresses a situation where the original local map data is available.
+    </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/PartSLAM/image3.png" alt="Fig3" style="max-width: 60%;">
+      <p>Fig. 3. Datasets used for experiments. “abuilding”, “albert”, “claxton”, “fr079”, “run101”, and “kwing” from radish dataset [13] are used as the dictionary maps. 
+        “Local/global maps” are several samples from local and global maps.
+      </p></div>
+  
+  <div style="text-align: left;">
+      <img src="../images_file/PartSLAM/image4.png" alt="Fig4" style="max-width: 60%;">
+      <p>Fig. 4. Results of part-based scene modeling. For each panel, the top subpanel shows the input local map, while the middle and the bottom subpanels
+        respectively illustrate the representative parts discovered w.r.t. the local and the global maps. In each figure, the white dots indicate point cloud
+        in the map, and the colored rectangles indicate bounding boxes that crop the representative parts.
+      </p></div>
+
+  <div style="text-align: left;">
+      <p><strong>Table1：</strong>SUMMARY OF ANR PERFORMANCE.</p>
+      <img src="../images_file/PartSLAM/table1.png" alt="Table1" style="max-width: 45%;">
+      <p>The Data ID #1-#5 correspond to ANR for global map database from “fr101”, “abuilding”, “albert”, “kwing” and “fr079”, where “fr079”, “fr101”, “run”,
+        “claxton2” and “albert” are respectively used as dictionary map. The colored fonts and the bold-face fonts respectively represent the best 5 methods
+        and the best method for each data.
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/PartSLAM/image5.png" alt="Fig5" style="max-width: 60%;">
+      <p>Fig. 5. Normalized rank for each strategy.
+      </p></div>
 
 </body>
 </html>
