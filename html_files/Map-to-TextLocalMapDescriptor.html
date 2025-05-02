@@ -2,667 +2,173 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-<style>
-</style>
+  <title>Map-to-Text: Local Map Descriptor - SICE JCMSI 2016 </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #ffffff;
+      color: #000000;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 22px;
+      margin-top: 30px;
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 5px;
+    }
+    .authors {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .abstract {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-left: 5px solid #007acc;
+      margin-bottom: 30px;
+    }
+    .abstract p {
+      margin-bottom: 15px;
+    }
+    .links a {
+      display: inline-block;
+      margin-right: 15px;
+      color: #007acc;
+      text-decoration: none;
+    }
+    .bibtex {
+      background-color: #f9f9f9;
+      padding: 15px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      border: 1px solid #ccc;
+      margin-bottom: 30px;
+    }
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .images img {
+      max-width: 50%;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+    .keywords {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border: 1px dashed #007acc;
+      margin-bottom: 30px;
+    }
+  </style>
 </head>
+<body>
+
+  <h1>Map-to-Text: Local Map Descriptor</h1>
+
+  <div class="authors">
+    Hanada Shogo, Tanaka Kanji  </div>
+
+  <h2>Keywords</h2>
+  <div class="keywords">
+    
+  </div>
+
+  <h2>Abstract</h2>
+  <div class="abstract">
+    <p>Abstract— Map matching, the ability to match a local map built by a mobile robot to previously built maps, is crucial in many robotic mapping,
+      self-localization, and simultaneous localization and mapping (SLAM) applications. In this paper, we propose a solution to the “map-to-text (M2T)” problem,
+      which involves the generation of text descriptions of local map content based on scene understanding to facilitate fast succinct text-based map matching.
+      Unlike previous local feature approaches that trade discriminativity for viewpoint invariance, we develop a holistic view descriptor that is view-dependent
+      and highly discriminative. Our approach is inspired by two independent observations: (1) The behavior of mobile robots given a local map can often be characterized
+      by a unique viewpoint trajectory, and (2) a holistic view descriptor can be highly discriminative if the viewpoint is unique given the local map. Our method consists
+      of three distinct steps: (1) First, an informative local map of the robot’s local surroundings is built. (2) Next, a unique viewpoint trajectory is planned in accordance
+      with the given local map. (3) Finally, a synthetic view is described at the designated viewpoint. Because the success of our holistic view descriptor depends on the
+      assumption that the viewpoint is unique given a local map, we also address the issue of viewpoint planning and present a solution that provides similar views for
+      similar local maps. Consequently, we also propose a practical map-matching framework that combines the advantages of the fast succinct bag-of-words technique and
+      the highly discriminative M2T holistic view descriptor. The results of experiments conducted using the publicly available radish dataset verify the efficacy of our
+      proposed approach. Further, although this paper focuses on the standard 2D pointset map, we believe that our approach is sufficiently general to be applicable to
+      a broad range of map formats, such as the 3D and general view-based maps.</p>
+  </div>
+
+  <h2>Related document</h2>
+  <div class="links">
+    <a href="">[PDF]</a>
+    <a href="補足資料へのリンク">[Supplementary]</a>
+    <a href="">[arXiv]</a>
+    <a href="コードへのリンク">[Code]</a>
+  </div>
+
+  <h2>BibTeX</h2>
+  <div class="bibtex">
+@article{published_papers/5212043,
+title = {Map-to-Text: Local Map Descriptor},
+author = {tanaka kanji and hanada shogo},
+journal = {SICE Journal of Control, Measurement, and System Integration},
+month = {3},
+number = {2},
+pages = {86--92},
+publisher = {The Society of Instrument and Control Engineers},
+doi = {10.9746/jcmsi.9.86},
+volume = {9},
+year = {2016}
+}
+  </div>
+
+  <h2>図表・写真</h2>
+
+  <div style="text-align: left;">
+      <img src="../images_file/Map-to-Text/image1.png" alt="Fig1" style="max-width: 60%;">
+      <p>Fig. 1. Local map descriptor. The top row shows four different places in the robot’s operating environment. The middle and bottom rows show two
+        independent local maps built by the robot at different times throughout the day, each of which is warped into synthetic views by the proposed viewpoint planner.
+        To facilitate visualization, the figure is shifted and rotated so that the viewpoint is placed at the center and the viewing direction is aligned with the
+        upper direction of the figure. As can be seen, similar synthetic views are produced for similar local maps. Our method converts each view into a holistic view descriptor.
+    </p></div>
+  
+  <div style="text-align: left;">
+      <img src="../images_file/Map-to-Text/image2.png" alt="Fig2" style="max-width: 60%;">
+      <p>Fig. 2. Extraction of 2D polestar features from a 2D pointset map.
+    </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/Map-to-Text/image3.png" alt="Fig3" style="max-width: 60%;">
+      <p>Fig. 3. Datasets used in the experiments: “abuilding,” “albert,” “fr079,” “run,” “fr101,” and “kwing” from the radish dataset [12].
+      </p></div>
+  
+  <div style="text-align: left;">
+      <img src="../images_file/Map-to-Text/image4.png" alt="Fig4" style="max-width: 60%;">
+      <p>Fig. 4. Examples of matching relevant pairs. Green and blue points indicate the query and the database maps, while the red lines indicate correspondence
+        found by either method. To facilitate visualization, both maps are aligned w.r.t. the true viewpoints.
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/Map-to-Text/image5.png" alt="Fig5" style="max-width: 60%;">
+      <p>Fig. 5. Examples of matching irrelevant pairs.
+      </p></div>
+   
+  <div style="text-align: left;">
+      <p><strong>Table1：</strong>SUMMARY OF ANR PERFORMANCE [%].</p>
+      <img src="../images_file/Map-to-Text/table1.png" alt="Table1" style="max-width: 45%;">
+  </div>
+  
+  <div style="text-align: left;">
+      <img src="../images_file/Map-to-Text/image6.png" alt="Fig6" style="max-width: 60%;">
+      <p>Fig. 6. ANR performance for each dataset (horizontal axis: sorted query map ID, vertical axis: ANR in [%]).
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/Map-to-Text/image7.png" alt="Fig7" style="max-width: 60%;">
+      <p>Fig. 7. Examples of matching M2T local map descriptors. (a) The local maps and the viewpoint trajectories. The top panel shows a collection of local maps (blue dots),
+        the viewpoint trajectory (purple points), as well as the “unique” viewpoints planned by our framework (blue points). The bottom panel shows the sequence of planned
+        viewpoints in the xyt space (t: viewpoint ID). (b) Matching M2T descriptors between a relevant map pair (first and second columns) and between an irrelevant map
+        pair (third and fourth columns). The relevant and irrelevant pairs are also indicated by purple line segments in Fig. 7a. For each column, the matched visual words
+        are highlighted in red. Each row shows from top to bottom, appearance word wa, pose words wx,wy, and the text description {⟨wx,wy,wa⟩}.
+      </p></div>
 
-<body lang=JA link=blue vlink=purple style='tab-interval:42.0pt;text-justify-trim:
-punctuation'>
-
-<div class=WordSection1 style='layout-grid:18.0pt'>
-
-<p class=MsoNormal><span lang=EN-US style='font-size:15.5pt;font-family:NimbusRomNo9L-Medi;
-mso-bidi-font-family:NimbusRomNo9L-Medi;mso-font-kerning:0pt'>Map-to-Text:
-Local Map Descriptor<o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='font-size:15.5pt;font-family:NimbusRomNo9L-Medi;
-mso-bidi-font-family:NimbusRomNo9L-Medi;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span lang=EN-US style='font-size:12.0pt;font-family:
-NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:
-0pt'>Kanji T</span><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'>ANAKA </span><span
-lang=EN-US style='font-size:12.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'>and Shogo H</span><span lang=EN-US
-style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'>ANADA<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><i><span style='font-size:8.5pt;font-family:CMSY10;
-mso-hansi-font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:CMSY10;
-mso-font-kerning:0pt'>&#8727;<span lang=EN-US><o:p></o:p></span></span></i></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Medi;mso-bidi-font-family:NimbusRomNo9L-Medi;
-mso-font-kerning:0pt'>Abstract </span><span lang=EN-US style='font-size:9.0pt;
-font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>:</span></span><span lang=EN-US style='font-size:9.0pt;
-font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> Map matching, the ability to match a local map built by
-a mobile robot to previously built maps, is crucial<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>in</span></span><span lang=EN-US style='font-size:9.0pt;
-font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> many robotic mapping, self-localization, and
-simultaneous localization and mapping (SLAM) applications. In this<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>paper</span></span><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>, we propose a solution to the “map-to-text (M2T)”
-problem, which involves the generation of text descriptions<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>of</span></span><span lang=EN-US style='font-size:9.0pt;
-font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> local map content based on scene understanding to
-facilitate fast succinct text-based map matching. Unlike previous<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>local</span></span><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> feature approaches that trade discriminativity for
-viewpoint invariance, we develop a holistic view descriptor that is<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>view-dependent</span></span><span lang=EN-US
-style='font-size:9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'> and highly discriminative. Our
-approach is inspired by two independent observations: (1) <span class=GramE>The</span>
-behavior<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>of</span></span><span lang=EN-US style='font-size:9.0pt;
-font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> mobile robots given a local map can often be
-characterized by a unique viewpoint trajectory, and (2) a holistic view<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>descriptor</span></span><span lang=EN-US
-style='font-size:9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'> can be highly discriminative if the
-viewpoint is unique given the local map. Our method consists of three<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>distinct</span></span><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> steps: (1) First, an informative local map of the
-robot’s local surroundings is built. (2) Next, a unique viewpoint<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>trajectory</span></span><span lang=EN-US
-style='font-size:9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'> is planned in accordance with the
-given local map. (3) Finally, a synthetic view is described at the designated<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>viewpoint</span></span><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>. Because the success of our holistic view descriptor
-depends on the assumption that the viewpoint is unique<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>given</span></span><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> a local map, we also address the issue of viewpoint
-planning and present a solution that provides similar views for<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>similar</span></span><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> local maps. Consequently, we also propose a practical
-map-matching framework that combines the advantages<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>of</span></span><span lang=EN-US style='font-size:9.0pt;
-font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> the fast succinct bag-of-words technique and the highly
-discriminative M2T holistic view descriptor. The results of<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>experiments</span></span><span lang=EN-US
-style='font-size:9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'> conducted using the publicly available
-radish dataset verify the efficacy of our proposed approach.<o:p></o:p></span></p>
-
-<p class=MsoNormal><span class=SpellE><span class=GramE><span lang=EN-US
-style='font-size:9.0pt;font-family:NimbusRomNo9L-Medi;mso-bidi-font-family:
-NimbusRomNo9L-Medi;mso-font-kerning:0pt'>KeyWords</span></span></span><span
-class=GramE><span lang=EN-US style='font-size:9.0pt;font-family:NimbusRomNo9L-Medi;
-mso-bidi-font-family:NimbusRomNo9L-Medi;mso-font-kerning:0pt'> :</span></span><span
-lang=EN-US style='font-size:9.0pt;font-family:NimbusRomNo9L-Medi;mso-bidi-font-family:
-NimbusRomNo9L-Medi;mso-font-kerning:0pt'> </span><span lang=EN-US
-style='font-size:9.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'>map-to-text, map matching, scene
-descriptor<o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt;font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
-
-<p><b><span lang=EN-US>Members</span></b><span lang=EN-US>: Tanaka Kanji, <span
-class=SpellE>Hanada</span> Shogo, Liu <span class=SpellE>Enfu</span>, Takahashi
-Yoshiki</span></p>
-
-<p><b><span lang=EN-US><o:p>&nbsp;</o:p></span></b></p>
-
-<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b><span
-lang=EN-US>Relevant Publication<span class=GramE>:</span></span></b><span
-lang=EN-US><br>
-<br>
-Shogo <span class=SpellE>Hanada</span>, Kanji Tanaka<br>
-M2T: Local map descriptor<br>
-System Integration (SII), 2014 IEEE/SICE International Symposium on, 210-215<br>
-<a href="https://scholar.googleusercontent.com/scholar.bib?q=info:1DHkVd6XVfUJ:scholar.google.com/&output=citation&scisig=AAGBfm0AAAAAW8G7W9WwbvVMwYBftRZhE65qoihuPcnc&scisf=4&ct=citation&cd=-1&hl=ja">Bibtex source</a>, <a href="SII14_0095_FI.pdf">Document
-PDF</a><br>
-<br>
-<b>Acknowledgements: </b>This work is supported in part by JSPS KAKENHI
-Grant-in-Aid for Young Scientists (B) 23700229, and for Scientific Research (C)
-26330297.</span></p>
-
-<p class=MsoNormal><span lang=EN-US style='font-size:9.0pt;font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-no-proof:yes'><img border=0 width=567 height=311
-src="../images_file/LocalMapDescriptor2/image002.jpg" v:shapes="図_x0020_1"></span></p>
-
-<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>Fig. 1.</span></span><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> <span class=GramE>Generating text description of local
-map content.</span> The top row shows<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>four</span></span><span lang=EN-US style='font-size:8.0pt;
-font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> different places in the robot’s operating environment.
-The middle and<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>bottom</span></span><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> rows respectively show two independent local maps built
-by the<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>robot</span></span><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> at different time of the day that are warped into
-synthetic views by<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>the</span></span><span lang=EN-US style='font-size:8.0pt;
-font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> proposed framework. For the sake of visualization, the <span
-class=GramE>viewpoint are</span><o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>located</span></span><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> at the center and aligned with the <span class=SpellE>uppper</span>
-direction of the figure. As<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>can</span></span><span lang=EN-US style='font-size:8.0pt;
-font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> be seen, similar views are produced for similar local
-maps. Our idea is<o:p></o:p></span></p>
-
-<p class=MsoNormal><span class=GramE><span lang=EN-US style='font-size:8.0pt;
-font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>to</span></span><span lang=EN-US style='font-size:8.0pt;
-font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> convert each view into a holistic view descriptor.<o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="図_x0020_4" o:spid="_x0000_i1035" type="#_x0000_t75" style='width:426pt;
- height:123pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="../images_file/LocalMapDescriptor2/image003.png" o:title=""/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=568 height=164
-src="../images_file/LocalMapDescriptor2/image004.jpg" v:shapes="図_x0020_4"><![endif]></span></p>
-
-<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal><span class=GramE><span lang=EN-US style='font-size:8.0pt;
-font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>Fig. 2.</span></span><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> <span class=GramE>Detection, extraction and description
-of 10-dim polestar features.</span><o:p></o:p></span></p>
-
-<p class=MsoNormal><span lang=EN-US style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="図_x0020_7" o:spid="_x0000_i1034" type="#_x0000_t75" style='width:425.25pt;
- height:228pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="../images_file/LocalMapDescriptor2/image005.png" o:title=""/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=567 height=304
-src="../images_file/LocalMapDescriptor2/image006.jpg" v:shapes="図_x0020_7"><![endif]></span></p>
-
-<p class=MsoNormal><span class=GramE><span lang=EN-US style='font-size:8.0pt;
-font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>Fig. 3.</span></span><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> Datasets used for experiments. “<span class=SpellE><span
-class=GramE>abuilding</span></span>”, “<span class=SpellE>albert</span>”,
-“fr079”, “run”,<o:p></o:p></span></p>
-
-<p class=MsoNormal><span style='font-size:8.0pt;font-family:"ＭＳ 明朝","serif";
-mso-ascii-font-family:NimbusRomNo9L-Regu;mso-fareast-font-family:"ＭＳ 明朝";
-mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'>“</span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'>fr101”, and “<span class=SpellE>kwing</span>”
-from radish dataset [10] are used as the dictionary<o:p></o:p></span></p>
-
-<p class=MsoNormal><span class=GramE><span lang=EN-US style='font-size:8.0pt;
-font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>maps</span></span><span lang=EN-US style='font-size:8.0pt;
-font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>.<o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:5.25pt;mso-char-indent-count:.5'><span
-lang=EN-US style='mso-no-proof:yes'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='text-indent:5.25pt;mso-char-indent-count:.5'><span
-lang=EN-US style='mso-no-proof:yes'><img border=0 width=333 height=567
-src="../images_file/LocalMapDescriptor2/image008.jpg" v:shapes="図_x0020_10"><![endif]></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-class=GramE><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'>Fig. 4.</span></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'> <span class=GramE>Examples of
-matching relevant pairs.</span> Green and blue points<o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-class=GramE><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'>respectively</span></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'> indicate query and database maps,
-while the red lines indicate<o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-class=GramE><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'>correspondence</span></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'> found by either method. For the sake
-of visualization, every<o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-class=GramE><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'>map</span></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'> in the figure is aligned by our map
-alignment framework.<o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt;mso-no-proof:yes'><img border=0 width=272 height=567
-src="../images_file/LocalMapDescriptor2/image010.jpg" v:shapes="図_x0020_13"><![endif]></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-class=GramE><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'>Fig. 5.</span></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'> <span class=GramE>Examples of
-matching irrelevant pairs.</span> Green and blue points<o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-class=GramE><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'>respectively</span></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'> indicate query and database maps,
-while the red lines indicate<o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-class=GramE><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'>correspondence</span></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'> found by either method. For the sake
-of visualization, every<o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-class=GramE><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'>map</span></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'> in the figure is aligned by our map
-alignment framework.<o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'>Table 1 Summary of ANR performance
-[%].<o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="図_x0020_16" o:spid="_x0000_i1031" type="#_x0000_t75" style='width:69pt;
- height:408.75pt;rotation:-90;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="../images_file/LocalMapDescriptor2/image011.png" o:title=""/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=545 height=92
-src="../images_file/LocalMapDescriptor2/image012.jpg" v:shapes="図_x0020_16"><![endif]></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt;mso-no-proof:yes'><img border=0 width=480 height=567
-src="../images_file/LocalMapDescriptor2/image014.jpg" v:shapes="図_x0020_19"><![endif]></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-class=GramE><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'>Fig. 6.</span></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'> ANR performance for each dataset
-(horizontal axis: sorted query<o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-class=GramE><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'>map</span></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'> ID, vertical axis: ANR in [%]). Top:
-BoW. Bottom: M2T.<o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt;mso-no-proof:yes'><img border=0 width=598 height=448
-src="../images_file/LocalMapDescriptor2/image016.jpg" v:shapes="図_x0020_22"><![endif]></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt;mso-no-proof:yes'><img border=0 width=390 height=776
-src="../images_file/LocalMapDescriptor2/image018.jpg" v:shapes="図_x0020_25"><![endif]></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p></o:p></span></p>
-
-
-
-<p class=MsoNormal style='text-indent:6.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:12.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'>8-th viewpoint<o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-class=GramE><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'>b-1</span></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt;mso-no-proof:yes'><img border=0 width=387 height=765
-src="../images_file/LocalMapDescriptor2/image020.jpg" v:shapes="図_x0020_28"><![endif]></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p></o:p></span></p>
-
-
-
-<p class=MsoNormal style='text-indent:6.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:12.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'>378-th viewpoint<o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-class=GramE><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'>b-2</span></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="図_x0020_31" o:spid="_x0000_i1026" type="#_x0000_t75" style='width:565.5pt;
- height:283.5pt;rotation:-90;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="../images_file/LocalMapDescriptor2/image021.png" o:title=""/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=378 height=754
-src="../images_file/LocalMapDescriptor2/image022.jpg" v:shapes="図_x0020_31"><![endif]></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p></o:p></span></p>
-
-
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span lang=EN-US style='font-size:12.0pt;font-family:
-NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:
-0pt'>8-th viewpoint<o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-class=GramE><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'>b-3</span></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="図_x0020_34" o:spid="_x0000_i1025" type="#_x0000_t75" style='width:567pt;
- height:285pt;rotation:-90;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="../images_file/LocalMapDescriptor2/image023.png" o:title=""/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=380 height=756
-src="../images_file/LocalMapDescriptor2/image024.jpg" v:shapes="図_x0020_34"><![endif]></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:6.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:12.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'>360-th viewpoint<o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-class=GramE><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'>b-4</span></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>Fig. 7.</span></span><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> <span class=GramE>Examples of matching M2T local map
-descriptors.</span> (a) The local maps and the viewpoint trajectories. The top
-panel shows a collection of local<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>maps</span></span><span lang=EN-US style='font-size:8.0pt;
-font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> (blue dots), the viewpoint trajectory (purple points),
-as well as the “unique” viewpoints planned by our framework (blue points). The
-bottom panel<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>shows</span></span><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> the sequence of planned viewpoints in the </span><span
-class=SpellE><i><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-ReguItal;
-mso-bidi-font-family:NimbusRomNo9L-ReguItal;mso-font-kerning:0pt'>xyt</span></i></span><i><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-ReguItal;
-mso-bidi-font-family:NimbusRomNo9L-ReguItal;mso-font-kerning:0pt'> </span></i><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'>space (</span><i><span lang=EN-US
-style='font-size:8.0pt;font-family:NimbusRomNo9L-ReguItal;mso-bidi-font-family:
-NimbusRomNo9L-ReguItal;mso-font-kerning:0pt'>t</span></i><span lang=EN-US
-style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'>: viewpoint ID). (b) Matching M2T
-descriptors between a relevant map pair (first and second<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>columns</span></span><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>) and between an irrelevant map pair (third and fourth
-columns). The relevant and irrelevant pairs are also indicated by purple line
-segments in<o:p></o:p></span></p>
-
-<p class=MsoNormal align=left style='text-align:left;mso-layout-grid-align:
-none;text-autospace:none'><span class=GramE><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'>Fig. 7a.</span></span><span lang=EN-US style='font-size:
-8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:NimbusRomNo9L-Regu;
-mso-font-kerning:0pt'> For each column, the matched visual words are
-highlighted in red. Each row shows from top to bottom, appearance word </span><span
-class=SpellE><i><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-ReguItal;
-mso-bidi-font-family:NimbusRomNo9L-ReguItal;mso-font-kerning:0pt'>w</span></i><i><span
-lang=EN-US style='font-size:6.0pt;font-family:NimbusRomNo9L-ReguItal;
-mso-bidi-font-family:NimbusRomNo9L-ReguItal;mso-font-kerning:0pt'>a</span></i></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'>, pose words </span><span
-class=SpellE><i><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-ReguItal;
-mso-bidi-font-family:NimbusRomNo9L-ReguItal;mso-font-kerning:0pt'>w</span></i><i><span
-lang=EN-US style='font-size:6.0pt;font-family:NimbusRomNo9L-ReguItal;
-mso-bidi-font-family:NimbusRomNo9L-ReguItal;mso-font-kerning:0pt'>x</span></i><span
-class=GramE><i><span lang=EN-US style='font-size:8.0pt;font-family:CMMI10;
-mso-bidi-font-family:CMMI10;mso-font-kerning:0pt'>;</span></i><i><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-ReguItal;
-mso-bidi-font-family:NimbusRomNo9L-ReguItal;mso-font-kerning:0pt'>w</span></i><i><span
-lang=EN-US style='font-size:6.0pt;font-family:NimbusRomNo9L-ReguItal;
-mso-bidi-font-family:NimbusRomNo9L-ReguItal;mso-font-kerning:0pt'>y</span></i></span></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'>,<o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-class=GramE><span lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;
-mso-bidi-font-family:NimbusRomNo9L-Regu;mso-font-kerning:0pt'>and</span></span><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'> the text description </span><span
-class=SpellE><i><span lang=EN-US style='font-size:8.0pt;font-family:CMSY10;
-mso-hansi-font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:CMSY10;
-mso-font-kerning:0pt'>fh</span></i><i><span lang=EN-US style='font-size:8.0pt;
-font-family:NimbusRomNo9L-ReguItal;mso-bidi-font-family:NimbusRomNo9L-ReguItal;
-mso-font-kerning:0pt'>w</span></i><i><span lang=EN-US style='font-size:6.0pt;
-font-family:NimbusRomNo9L-ReguItal;mso-bidi-font-family:NimbusRomNo9L-ReguItal;
-mso-font-kerning:0pt'>x</span></i><i><span lang=EN-US style='font-size:8.0pt;
-font-family:CMMI10;mso-bidi-font-family:CMMI10;mso-font-kerning:0pt'>;</span></i><i><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-ReguItal;
-mso-bidi-font-family:NimbusRomNo9L-ReguItal;mso-font-kerning:0pt'>w</span></i><i><span
-lang=EN-US style='font-size:6.0pt;font-family:NimbusRomNo9L-ReguItal;
-mso-bidi-font-family:NimbusRomNo9L-ReguItal;mso-font-kerning:0pt'>y</span></i><i><span
-lang=EN-US style='font-size:8.0pt;font-family:CMMI10;mso-bidi-font-family:CMMI10;
-mso-font-kerning:0pt'>;</span></i><i><span lang=EN-US style='font-size:8.0pt;
-font-family:NimbusRomNo9L-ReguItal;mso-bidi-font-family:NimbusRomNo9L-ReguItal;
-mso-font-kerning:0pt'>w</span></i><i><span lang=EN-US style='font-size:6.0pt;
-font-family:NimbusRomNo9L-ReguItal;mso-bidi-font-family:NimbusRomNo9L-ReguItal;
-mso-font-kerning:0pt'>a</span></i><i><span lang=EN-US style='font-size:8.0pt;
-font-family:CMSY10;mso-hansi-font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-CMSY10;mso-font-kerning:0pt'>ig</span></i></span><span lang=EN-US
-style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'>.<o:p></o:p></span></p>
-
-<p class=MsoNormal style='text-indent:4.0pt;mso-char-indent-count:.5'><span
-lang=EN-US style='font-size:8.0pt;font-family:NimbusRomNo9L-Regu;mso-bidi-font-family:
-NimbusRomNo9L-Regu;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
-</div>
 </body>
 </html>
