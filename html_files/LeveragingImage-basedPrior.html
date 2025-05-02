@@ -81,7 +81,16 @@
 
   <h2>Abstract</h2>
   <div class="abstract">
-    <p>In this paper, we address the challenging problem of single-view cross-season place recognition. A new approach is proposed for compact discriminative scene descriptor that helps in coping with changes in appearance in the environment. We focus on a simple effective strategy that uses objects whose appearance remain the same across seasons as valid landmarks. Unlike popular bag-of-words (BoW) scene descriptors that rely on a library of vector quantized visual features, our descriptor is based on a library of raw image data (e.g., visual experience shared by colleague robots, publicly available photo collections from Google StreetView), and directly mines it to identify landmarks (i.e., image patches) that effectively explain an input query/database image. The discovered landmarks are then compactly described by their pose and shape (i.e., library image ID, and bounding boxes) and used as a compact discriminative scene descriptor for the input image. We collected a dataset of single-view images across seasons with annotated ground truth, and evaluated the effectiveness of our scene description framework by comparing its performance to that of previous BoW approaches, and by applying an advanced Naive Bayes Nearest neighbor (NBNN) image-to-class distance measure.</p>
+    <p>In this paper, we address the challenging problem of single-view cross-season place recognition. A new approach is proposed 
+      for compact discriminative scene descriptor that helps in coping with changes in appearance in the environment. We focus on a 
+      simple effective strategy that uses objects whose appearance remain the same across seasons as valid landmarks. Unlike popular
+      bag-of-words (BoW) scene descriptors that rely on a library of vector quantized visual features, our descriptor is based on a
+      library of raw image data (e.g., visual experience shared by colleague robots, publicly available photo collections from Google StreetView),
+      and directly mines it to identify landmarks (i.e., image patches) that effectively explain an input query/database image. The discovered
+      landmarks are then compactly described by their pose and shape (i.e., library image ID, and bounding boxes) and used as a compact discriminative
+      scene descriptor for the input image. We collected a dataset of single-view images across seasons with annotated ground truth, and evaluated the
+      effectiveness of our scene description framework by comparing its performance to that of previous BoW approaches, and by applying an advanced
+      Naive Bayes Nearest neighbor (NBNN) image-to-class distance measure.</p>
   </div>
 
   <h2>Related document</h2>
@@ -114,11 +123,70 @@
   </div>
 
   <h2>図表・写真</h2>
-  <div class="images">
-    <img src="../images_file//image1.png" alt="Fig. 1">
-      <figcaption>.</figcaption>
-    <img src="../images_file//image2.png" alt="図2 説明">
-<figcaption>a</figcaption>
+  <div style="text-align: left;">
+      <img src="../images_file/LeveragingImage-basedPrior/image1.png" alt="Fig1" style="max-width: 60%;">
+      <p>Fig. 1. Single-view cross-season place recognition. The appearance of a place may vary depending on geometric (e.g., viewpoint trajectories and object configuration)
+        and photometric conditions (e.g., illumination). Such changes in appearance lead to difficulties in scene matching, and thereby increasing the requirement for a highly
+        discriminative, compact scene descriptor. In this figure, the panels (top-left, top-right, bottom-left, bottom-right) shows visual images acquired in autumn (AU:2013/10),
+        winter (WI:2013/12), spring (SP:2014/4), and summer (SU:2014/7), respectively.
+    </p></div>
+  
+  <div style="text-align: left;">
+      <img src="../images_file/LeveragingImage-basedPrior/image2.png" alt="Fig2" style="max-width: 60%;">
+      <p>Fig. 2. System overview: proposing, verifying and retrieving landmarks for cross-season place recognition. The proposed framework consists of three distinct steps:
+        (1) landmarks are proposed by patch-level saliency evaluation (red boxes in “Query”), (2) landmarks are verified by mining the image prior to find similar patterns
+        (red boxes in “Mined image”), and (3) landmarks are retrieved by using the bag-of-bounding-boxes scene descriptors (colored boxes in the bottom figure).
+    </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/LeveragingImage-basedPrior/image3.png" alt="Fig3" style="max-width: 60%;">
+      <p>Fig. 3. Experimental environments and viewpoint paths.
+      </p></div>
+  
+  <div style="text-align: left;">
+      <img src="../images_file/LeveragingImage-basedPrior/image4.png" alt="Fig4" style="max-width: 60%;">
+      <p>Fig. 4. Datasets. Image datasets are collected for various types of scenes and across seasons (top).
+        The dataset consists of three datasets of query, database, and library images collected during four different seasons over a year (bottom).
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/LeveragingImage-basedPrior/image5.png" alt="Fig5" style="max-width: 60%;">
+      <p>Fig. 5. Examples of scene retrievals. From left to right, each panel shows a query image, the ground truth image, the database image top-ranked by the BoW
+        method and by the proposed method.
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/LeveragingImage-basedPrior/image6.png" alt="Fig6" style="max-width: 60%;">
+      <p>Fig. 6. Examples of proposing, verifying and retrieving landmarks. From left to right, input image, saliency image, landmark proposal (blue bounding box), mined library image,
+        landmark discovered w.r.t. the library image’s coordinate, and the top-ranked database image.
+      </p></div>
+
+  <div style="text-align: left;">
+      <p><strong>Table1：</strong>SCENE RETRIEVAL PERFORMANCE IN %</p>
+      <img src="../images_file/LeveragingImage-basedPrior/table1.png" alt="Table1" style="max-width: 45%;">
+  </div>
+  
+  <div style="text-align: left;">
+      <p><strong>Table2：</strong>DEPENDENCY ON IMAGE PRIOR</p>
+      <img src="../images_file/LeveragingImage-basedPrior/table2.png" alt="Table2" style="max-width: 45%;">
+  </div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/LeveragingImage-basedPrior/image7.png" alt="Fig7" style="max-width: 60%;">
+      <p>Fig. 7. Frequency of library images
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/LeveragingImage-basedPrior/image8.png" alt="Fig8" style="max-width: 60%;">
+      <p>Fig. 8. Comparison across seasons. Horizontal axis: sorted query ID. Vertical axis: difference of normalized ranks ∆r = r^S1− r^S2 between different season databases.
+        S1 and S2 are two different seasons indicated in the key (e.g., “WI-SP” indicates ∆r = r^WI −r^SP).
+      </p></div>
+
+  <div style="text-align: left;">
+      <img src="../images_file/LeveragingImage-basedPrior/image9.png" alt="Fig9" style="max-width: 60%;">
+      <p>Fig. 9. Results for NBNN image-to-class distance measure.
+  </p></div>
+  
   </div>
 
 </body>
