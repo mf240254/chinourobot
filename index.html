@@ -2,8 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Intelligent Robot Lab School of EngineeringUniversity of Fukui</title>
   <style>
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .title-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      gap: 20px; /* 画像とタイトルの間のスペース */
+    }
+    .title-row img {
+      width: 160px; /* 適切なサイズに調整 */
+      height: auto;
+    }
+    .title-text {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    
+    .address {
+      margin-top: 10px;
+      font-size: 1em;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      .title-row {
+        flex-direction: column;
+      }
+      .title-row img {
+        width: 60px;
+      }
+      .title-text {
+        font-size: 1.5em;
+      }
+    }
+    
     body {
       font-family: "Segoe UI", "Helvetica Neue", sans-serif;
       line-height: 1.6;
@@ -25,35 +68,12 @@
       color: #1a1a1a;
       margin-bottom: 1em;
     }
-
+    
     h2 {
       border-bottom: 2px solid #ccc;
       padding-bottom: 0.3em;
       margin-top: 2em;
       color: #2c3e50;
-    }
-    
-    .right-img {
-      position: absolute;
-      top: 10%;
-      transform: translateY(-50%);
-      height: 150px; /* ← ここで画像の見た目サイズを調整 */
-      width: auto;
-    }
-    .right-img {
-      left: 55%;
-      transform: translateY(-50%) translateX(100%);
-      margin-left: 10px;
-    }
-    .left-img {
-      position: absolute;
-      top: 3%;
-      transform: translateY(-50%);
-      height: 25px; /* ← ここで画像の見た目サイズを調整 */
-      width: auto;
-      right: 75.5%;
-      transform: translateY(-50%) translateX(100%);
-      margin-right: 10px;
     }
     
     ul {
@@ -110,19 +130,18 @@
       background-color: #a9f4ff;
       padding: 0.5em;
     }
-
-    /* コメントはそのまま */
+    
   </style>
 </head>
 <body>
   <header>
-      <img src="./images_file/fukui_logo1.png" width="400" alt="University of FUKUI School of Engineering" class="left-img">
-    <h1>Intelligent Robot Lab</h1>
-      <img src="./images_file/robot_image.png" alt="右画像" class="right-img">
-    <div style="text-align: center;">
-      Robotics Course, School of Engineering, University of Fukui <br>
-      3-9-1 Bunkyo, Fukui, Fukui, Japan
+    <div class="title-row">
+      <img src="./images_file/fukui_logo1.png" alt="左画像">
+      <div class="title-text">Intelligent Robot Lab</div>
+      <img src="./images_file/robot_image.png" alt="右画像">
     </div>
+    <div class="address">Robotics Course, School of Engineering, University of Fukui<br>
+3-9-1 Bunkyo, Fukui, Fukui, Japan</div>
   </header>
   <div class="container">
     <h2 class="bg-lightgray">Contents</h2>
